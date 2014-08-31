@@ -8,6 +8,5 @@ vendor/*
 !.htaccess
 !web.config
 
-nbproject
-
 app/config/config.local.neon
+app/nanuky.db

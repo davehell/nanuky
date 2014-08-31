@@ -9,24 +9,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="robots" content="{$robots}" n:ifset="$robots">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="robots" content="{$robots}" n:ifset="$robots">
 
-	<title>Nanuky {block title}{/block}</title>
+  <title>Nanuky - {block title}{/block}</title>
 
-	<link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap.min.css">
+  <link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap.min.css">
   <link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" media="print" href="{$basePath}/css/screen.css">
-	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
-	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
-	{block head}{/block}
+  <link rel="stylesheet" media="screen" href="{$basePath}/css/screen.css">
+  <link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
+  <link rel="shortcut icon" href="{$basePath}/favicon.ico">
+  {block head}{/block}
 </head>
 
 <body>
-	<script> document.documentElement.className+=' js' </script>
+  <script> document.documentElement.className+=' js' </script>
 
-	<div class="navbar navbar-default" role="navigation">
+  <div class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" n:href="Homepage:default">Nanuky</a>
@@ -34,17 +34,16 @@
       </div>
     </div>
 
-	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
-
   <div class="container">
+  <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
   {include content}
   </div>
 
-	{block scripts}
-	<script src="{$basePath}/js/jquery.js"></script>
-	<script src="{$basePath}/js/bootstrap.min.js"></script>
-	<script src="{$basePath}/js/netteForms.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
-	{/block}
+  {block scripts}
+  <script src="{$basePath}/js/jquery.js"></script>
+  <script src="{$basePath}/js/bootstrap.min.js"></script>
+  <script src="{$basePath}/js/netteForms.js"></script>
+  <script src="{$basePath}/js/main.js"></script>
+  {/block}
 </body>
 </html>

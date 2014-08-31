@@ -1,0 +1,15 @@
+{block content}
+<h1 n:inner-block="title">
+  Obsah mražáku
+</h1>
+<p>
+  <a n:href="Mrazak:pridat">Přidat nanuky</a>
+</p>
+{dump $nanukyNaMrazaku->getRowCount()}
+{if $nanukyNaMrazaku}
+<ul n:inner-foreach="$nanukyNaMrazaku as $nanuk">
+  <li>{$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span> {$nanuk->cena}&nbsp;Kč</li>
+</ul>
+{else}
+  <div class="flash">Jdeš pozdě! Mražák je prázdný.</div>
+{/if}

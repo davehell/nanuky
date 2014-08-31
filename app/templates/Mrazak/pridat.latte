@@ -1,0 +1,16 @@
+{block content}
+
+<h1 n:inner-block="title">
+  Přidání nanuků na mražák
+</h1>
+
+{control nanukForm}
+
+<script>
+  var velikostiBaleni = {
+  {foreach $velikostBaleni as $nanuk => $pocet}
+    {$nanuk}: {$pocet}{if !$iterator->last},{/if}
+  {/foreach}
+  };
+</script>
+

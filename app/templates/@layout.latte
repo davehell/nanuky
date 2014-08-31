@@ -1,5 +1,8 @@
 {**
+ * Layout template.
+ *
  * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
  * @param array    $flashes  flash messages
  *}
 
@@ -7,10 +10,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
 
-	<title>{ifset #title}{include title|striptags} | {/ifset}Nette Sandbox</title>
+	<title>{block title}{/block}Knihovnička</title>
 
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
+	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/bootstrap.min.css">
 	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
 	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
 	{block head}{/block}
@@ -18,13 +23,24 @@
 
 <body>
 	<script> document.documentElement.className+=' js' </script>
+	
+	<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" n:href="Homepage:default">Knihovnička</a>
+        </div>
+      </div>
+    </div>
 
 	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
-	{include content}
+  <div class="container">
+  {include content}
+  </div>
 
 	{block scripts}
 	<script src="{$basePath}/js/jquery.js"></script>
+	<script src="{$basePath}/js/bootstrap.min.js"></script>
 	<script src="{$basePath}/js/netteForms.js"></script>
 	<script src="{$basePath}/js/main.js"></script>
 	{/block}

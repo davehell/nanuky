@@ -1,0 +1,32 @@
+{block content}
+
+<div class="panel panel-default">
+<!-- Default panel contents -->
+  <table class="table table-striped table-bordered">
+	  <tr class="invert">
+		  <th>Název</th>
+		  <th>Autor</th>
+		  <th>Správa</th>
+	  </tr>
+
+	  <tr n:foreach="$books as $book">
+		  <td>{$book->title}</td>
+		  <td>{$book->author->name}</td>
+		  <td>
+			  <a n:href="delete!, $book->id" onclick="return confirm('Opravdu smazat?')">Smazat</a> |
+			  <a n:href="edit, $book->id">Upravit</a>
+		  </td>
+	  </tr>
+	  
+	  <tr class="panel-footer">
+		  {form bookForm,  class=>"form-inline"}
+		  <td>{input title, class=>"form-control"}</td>
+		  <td>{input id_author, class=>"form-control"}</td>
+		  <td>{input ok, value=>"Založit knihu", class=>"btn btn-primary"}</td>
+		  {/form}
+		  
+	  </tr>
+  </table>
+</div>
+			  
+{/block}

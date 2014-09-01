@@ -8,7 +8,7 @@
 
 {if $nanuky->count()}
   <ul n:inner-foreach="$nanuky as $nanuk">
-    <li>{$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span></li>
+    <li>{$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span> {$ceny[$nanuk->nanuky_id]}&nbsp;Kč</li>
   </ul>
 {else}
   <div class="alert alert-warning">Jdeš pozdě! Mražák je prázdný.</div>

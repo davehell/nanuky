@@ -19,4 +19,13 @@ class SkladRepository extends Repository
   {
     return $this->database->table('volne_nanuky')->select('nanuky_id, nazev, count(nanuky_id) AS pocet')->group('nanuky_id');
   }
+
+  /**
+   * Ceny nanuků v mražáku.
+   * @return \Nette\Database\Table\Selection
+   */
+  public function cenik()
+  {
+    return $this->database->table('volne_nanuky')->select('DISTINCT nanuky_id, cena')->order('id DESC');
+  }
 }

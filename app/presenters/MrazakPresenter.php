@@ -29,6 +29,7 @@ final class MrazakPresenter extends BasePresenter
   public function renderDefault()
   {
     $this->template->nanuky = $this->mrazak->inventura();
+    $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');;
   }
 
   public function renderPridat()

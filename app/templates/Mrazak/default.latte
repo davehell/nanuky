@@ -1,15 +1,18 @@
 {block content}
 <h1 n:inner-block="title">
-  Obsah mražáku
+  Mražák
 </h1>
-<p>
-  <a n:href="Mrazak:pridat">Přidat nanuky</a>
-</p>
+
 
 {if $nanuky->count()}
-  <ul n:inner-foreach="$nanuky as $nanuk">
-    <li>{$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span> {$ceny[$nanuk->nanuky_id]}&nbsp;Kč</li>
-  </ul>
+  <table id="mrazak" class="table table-striped">
+    <tbody>
+    <tr n:foreach="$nanuky as $nanuk">
+    <td><a n:href="Mrazak:koupit, $nanuk->nanuky_id" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a>
+    {$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span></td>
+    </tr>
+    </tbody>
+  </table>
 {else}
   <div class="alert alert-warning">Jdeš pozdě! Mražák je prázdný.</div>
 {/if}

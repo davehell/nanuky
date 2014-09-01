@@ -17,7 +17,7 @@ class SkladRepository extends Repository
    */
   public function inventura()
   {
-    return $this->database->table('volne_nanuky')->select('nanuky_id, nazev, count(nanuky_id) AS pocet')->group('nanuky_id');
+    return $this->database->table('volne_nanuky')->select('nanuky_id, nazev, count(nanuky_id) AS pocet')->group('nanuky_id')->order('nazev');
   }
 
   /**

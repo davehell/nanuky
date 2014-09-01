@@ -32,6 +32,12 @@ final class MrazakPresenter extends BasePresenter
     $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');;
   }
 
+  public function renderKoupit($nanuk, $kupec = null)
+  {
+    $this->template->nanuky = $this->mrazak->inventura();
+    $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');;
+  }
+
   public function renderPridat()
   {
     $this->template->velikostBaleni = $this->nanuk->findAll()->fetchPairs('id', 'baleni');

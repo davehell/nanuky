@@ -12,6 +12,9 @@
   <h1>
     Zákazník {$zakaznik}
   </h1>
+  <p>
+    Dluh: {$dlouzek}&nbsp;Kč
+  </p>
   <h1 n:inner-block="title">
     Mražák
   </h1>
@@ -19,7 +22,7 @@
     <table id="mrazak" class="table table-striped">
       <tbody>
       <tr n:foreach="$nanuky as $nanuk">
-      <td><a n:href="Mrazak:koupit, $nanuk->nanuky_id, $zakaznik" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a>
+      <td><a n:href="koupit!, $nanuk->nanuky_id, $zakaznik" class="ajax btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a>
       {$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span></td>
       </tr>
       </tbody>

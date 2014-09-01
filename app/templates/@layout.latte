@@ -47,12 +47,15 @@
   </div>
 
   <div class="container">
+  {snippet stranka}
   <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
   {include content}
+  {/snippet}
   </div>
 
   {block scripts}
   <script src="{$basePath}/js/jquery.js"></script>
+  <script src="{$basePath}/js/nette.ajax.js"></script>
   <script src="{$basePath}/js/bootstrap.min.js"></script>
   <script src="{$basePath}/js/netteForms.js"></script>
   <script src="{$basePath}/js/main.js"></script>

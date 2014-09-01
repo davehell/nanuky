@@ -33,20 +33,10 @@ final class MrazakPresenter extends BasePresenter
    */
   public $kupec;
 
-  /** @var string */
-  private $dlouzek;
-  
   public function renderDefault($zakaznik = null)
   {
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');
-    $kupec = $this->kupec->get($zakaznik);
-    $this->template->kupec = $kupec;
-
-    if($this->dlouzek === NULL) {
-      if($kupec) $this->dlouzek = $kupec->dluh;
-    }
-    $this->template->dlouzek = $this->dlouzek;
   }
 
   public function renderKoupit($nanuk, $zakaznik = null)
@@ -75,10 +65,11 @@ final class MrazakPresenter extends BasePresenter
     $this->koupitNanuk($zakaznik, $mrazak->id);
 
     $kupec = $this->kupec->get($zakaznik);
-    $this->dlouzek = $kupec->dluh;
     $this->flashMessage('Zakoupen nanuk ' . $mrazak->nazev . ' za ' . $mrazak->cena . ' Kč', 'success');
     if ($this->isAjax()) {
-      $this->invalidateControl('stranka');
+      $this->invalidateControl('mrazak');
+      $this->invalidateControl('dluh');
+      $this->invalidateControl('flash');
     }
   }
   

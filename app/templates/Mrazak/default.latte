@@ -9,16 +9,11 @@
   <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
 </ul>
 {else}
-  <h1>
-    Zákazník {$zakaznik}
-  </h1>
-  <p>
-    Dluh: {$dlouzek}&nbsp;Kč
-  </p>
   <h1 n:inner-block="title">
-    Mražák
+    Aktuální nabídka
   </h1>
   {if $nanuky->count()}
+    {snippet mrazak}
     <table id="mrazak" class="table table-striped">
       <tbody>
       <tr n:foreach="$nanuky as $nanuk">
@@ -27,6 +22,7 @@
       </tr>
       </tbody>
     </table>
+    {/snippet}
   {else}
     <div class="alert alert-warning">Jdeš pozdě! Mražák je prázdný.</div>
   {/if}

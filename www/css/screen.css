@@ -1,6 +1,12 @@
+.navbar {
+  margin-bottom: 0;
+}
+.alert {
+  margin-top: 20px;
+}
 #mrazak td {
   vertical-align: middle;
 }
 #mrazak td a.btn{
-  margin-right: 30px;
+  margin-right: 20px;
 }

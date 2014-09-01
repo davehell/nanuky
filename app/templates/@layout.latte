@@ -39,6 +39,9 @@
             <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
           </ul>
         </li>
+        {if $zakaznik}
+        <li n:snippet="dluh"><a href="#">Úvěr: {$dlouzek}&nbsp;Kč</a></li>
+        {/if}
         {if $zakaznik=="dhe"}
         <li><a n:href="Mrazak:pridat">Přidat nanuky</a></li>
         {/if}
@@ -47,10 +50,10 @@
   </div>
 
   <div class="container">
-  {snippet stranka}
+  {snippet flash}
   <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
-  {include content}
   {/snippet}
+  {include content}
   </div>
 
   {block scripts}

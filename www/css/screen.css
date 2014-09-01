@@ -1,3 +1,8 @@
+.navbar-brand {
+  background-image: url('../images/brand2.png');
+  background-repeat: no-repeat;
+  padding-left: 60px;
+}
 .navbar {
   margin-bottom: 0;
 }

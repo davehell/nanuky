@@ -6,10 +6,10 @@ namespace App\Model;
 /**
  * Repozitář pro práci s tabulkou 'Sklad'.
  */
-class SkladRepository extends Repository
+class MrazakRepository extends Repository
 {
 
-  protected $table = 'sklad';
+  protected $table = 'mrazak';
 
   /**
    * Počty nanuků v mražáku.

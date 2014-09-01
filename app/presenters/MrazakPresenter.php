@@ -3,7 +3,7 @@
 namespace App\Presenters;
 
 use App\Model\NanukRepository,
-    App\Model\SkladRepository,
+    App\Model\MrazakRepository,
     App\Model\KupecRepository,
     Nette\Application\UI\Form,
     Nextras\Forms\Rendering\Bs3FormRenderer;
@@ -16,7 +16,7 @@ final class MrazakPresenter extends BasePresenter
 {
   
   /**
-   * @var SkladRepository
+   * @var MrazakRepository
    * @inject
    */
   public $mrazak;

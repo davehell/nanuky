@@ -25,6 +25,6 @@ nette:
 services:
 	- App\RouterFactory
 	router: @App\RouterFactory::createRouter
-	- App\Model\SkladRepository
+	- App\Model\MrazakRepository
 	- App\Model\NanukRepository
 	- App\Model\KupecRepository

@@ -89,17 +89,28 @@ final class MrazakPresenter extends BasePresenter
    */
   public function nanukFormSuccess($form)
   {
-    $values = $form->getValues();
-    $pocet = $values['pocet'];
-    unset($values['pocet']);
-    unset($values['cena']);
-    
-    for($i=0; $i<$pocet; $i++) {
-      $this->mrazak->insert($values);
-    }
+    $this->naskladnit($form->getValues());
 
     $this->flashMessage('Přidáno', 'success');
     $this->redirect('pridat');
+  }
+
+
+  /**
+   * Fasáda pro přidání nanuků na sklad
+   * @param $values[]
+   */
+  private function naskladnit($values)
+  {
+    $pocet = $values['pocet'];
+    unset($values['pocet']);
+    unset($values['cena']);
+    $data = array();
+
+    for($i=0; $i<$pocet; $i++) {
+      $data[] = $values;
+    }
+    if(count($data)) $this->mrazak->insert($data);
   }
 
 

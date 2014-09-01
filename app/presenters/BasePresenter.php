@@ -3,7 +3,8 @@
 namespace App\Presenters;
 
 use Nette,
-	App\Model;
+    App\Model,
+    App\Model\KupecRepository;
 
 
 /**
@@ -11,5 +12,18 @@ use Nette,
  */
 abstract class BasePresenter extends Nette\Application\UI\Presenter
 {
+  /**
+   * @var KupecRepository
+   * @inject
+   */
+  public $kupec;
 
+  /** @persistent */
+  public $zakaznik;
+
+  public function beforeRender()
+  {
+    $this->template->kupci = $this->kupec->seznamKupcu();
+    $this->template->zakaznik = $this->zakaznik;
+  }
 }

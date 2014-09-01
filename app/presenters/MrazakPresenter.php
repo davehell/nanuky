@@ -33,17 +33,17 @@ final class MrazakPresenter extends BasePresenter
    */
   public $kupec;
   
-  public function renderDefault()
+  public function renderDefault($zakaznik = null)
   {
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');;
   }
 
-  public function renderKoupit($nanuk, $kupec = null)
+  public function renderKoupit($nanuk, $zakaznik = null)
   {
     $mrazak = $this->mrazak->volnyNanuk($nanuk);
     $this['nakupForm']->setDefaults(array(
-      "kupec" => $kupec,
+      "kupec" => $zakaznik,
       "id" => $mrazak->id,
       "nazev" => $mrazak->nazev,
       "cena_prodej" => $mrazak->cena

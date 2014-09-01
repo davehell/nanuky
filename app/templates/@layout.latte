@@ -26,13 +26,25 @@
 <body>
   <script> document.documentElement.className+=' js' </script>
 
-  <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" n:href="Mrazak:">Nanuky</a>
-        </div>
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" n:href="Mrazak:">Nanuky</a>
       </div>
+
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{if $zakaznik}Zákazník {$zakaznik}{else}A ty jsi kdo?{/if} <span class="caret"></span></a>
+          <ul class="dropdown-menu" n:inner-foreach="$kupci as $id => $jmeno">
+            <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
+          </ul>
+        </li>
+        {if $zakaznik=="dhe"}
+        <li><a n:href="Mrazak:pridat">Přidat nanuky</a></li>
+        {/if}
+      </ul>
     </div>
+  </div>
 
   <div class="container">
   <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>

@@ -28,7 +28,7 @@ final class MrazakPresenter extends BasePresenter
   
   public function renderDefault()
   {
-    $this->template->nanukyNaMrazaku = $this->mrazak->pok();
+    $this->template->nanuky = $this->mrazak->inventura();
   }
 
   public function renderPridat()
@@ -55,11 +55,11 @@ final class MrazakPresenter extends BasePresenter
   {
     $form = new Form;
     
-    $form->addSelect('nanuky_id', 'Nanuk', $this->nanuk->findAll()->fetchPairs('id', 'nazev'))
+    $form->addText('cena', 'Cena balení')
+      ->setRequired('Zadej nákupní cenu celého balení.');
+    $form->addSelect('nanuky_id', 'Nanuk', $this->nanuk->seznamNanuku())
       ->setRequired('Vyber druh nanuku.')
       ->setPrompt('Vyber nanuk');
-    $form->addText('cena', 'Nákupní cena [balení]')
-      ->setRequired('Zadej nákupní cenu celého balení.');
     $form->addText('pocet', 'Počet v balení')
       ->setRequired('Zadej počet nanuků v balení.');
     $form->addText('cena_nakup', 'Nákupní cena [kus]')

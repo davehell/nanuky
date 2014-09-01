@@ -43,7 +43,7 @@ final class MrazakPresenter extends BasePresenter
   {
     $mrazak = $this->mrazak->volnyNanuk($nanuk);
     $this['nakupForm']->setDefaults(array(
-      "kupci_id" => $kupec,
+      "kupec" => $kupec,
       "id" => $mrazak->id,
       "nazev" => $mrazak->nazev,
       "cena_prodej" => $mrazak->cena
@@ -134,7 +134,7 @@ final class MrazakPresenter extends BasePresenter
   {
     $form = new Form;
 
-    $form->addSelect('kupci_id', 'Kupec', $this->kupec->seznamKupcu())
+    $form->addSelect('kupec', 'Kupec', $this->kupec->seznamKupcu())
       ->setRequired('Řekni, kdo jsi.')
       ->setPrompt('Vyber, kdo jsi');
     $form->addText('nazev', 'Nanuk');
@@ -158,7 +158,7 @@ final class MrazakPresenter extends BasePresenter
   public function nakupFormSuccess($form)
   {
     $values = $form->getValues();
-    $this->koupit($values->kupci_id, $values->id);
+    $this->koupit($values->kupec, $values->id);
 
     $this->flashMessage('Zakoupeno', 'success');
     $this->redirect('default');
@@ -168,11 +168,12 @@ final class MrazakPresenter extends BasePresenter
    * Fasáda pro zakoupení nanuku
    * @param $values[]
    */
-  private function koupit($kupecId, $mrazakId)
+  private function koupit($jmeno, $mrazakId)
   {
     $nanuk = $this->mrazak->get($mrazakId);
-    $kupec = $this->kupec->get($kupecId);
-    $nanuk->update(array('kupci_id' => $kupecId));
+    $kupec = $this->kupec->get($jmeno);
+
+    $nanuk->update(array('kupec' => $jmeno));
     $kupec->update(array('dluh' => $kupec->dluh + $nanuk->cena_prodej));
   }
 }

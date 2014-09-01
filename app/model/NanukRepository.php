@@ -12,7 +12,7 @@ class NanukRepository extends Repository
   protected $table = 'nanuky';
 
   /**
-   * @return \Nette\Database\Table\Selection
+   * @return array
    */
   public function seznamNanuku()
   {

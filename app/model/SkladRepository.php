@@ -28,4 +28,13 @@ class SkladRepository extends Repository
   {
     return $this->database->table('volne_nanuky')->select('DISTINCT nanuky_id, cena')->order('id DESC');
   }
+
+  /**
+   * @param int druh nanuku
+   * @return \Nette\Database\Table\ActiveRow|FALSE
+   */
+  public function volnyNanuk($id)
+  {
+    return $this->database->table('volne_nanuky')->where('nanuky_id=?', $id)->order('id')->fetch();
+  }
 }

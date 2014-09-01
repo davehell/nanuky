@@ -27,3 +27,4 @@ services:
 	router: @App\RouterFactory::createRouter
 	- App\Model\SkladRepository
 	- App\Model\NanukRepository
+	- App\Model\KupecRepository

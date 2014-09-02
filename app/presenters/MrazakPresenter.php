@@ -162,7 +162,7 @@ final class MrazakPresenter extends BasePresenter
     $nanuk = $this->mrazak->get($mrazakId);
     $kupec = $this->kupec->get($jmeno);
 
-    $nanuk->update(array('kupec' => $jmeno));
+    $nanuk->update(array('kupec' => $jmeno, 'datum' => date('Y-m-d H:i:s')));
     $kupec->update(array('dluh' => $kupec->dluh + $nanuk->cena_prodej));
   }
 }

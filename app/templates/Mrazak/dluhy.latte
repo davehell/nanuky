@@ -1,0 +1,22 @@
+{block content}
+
+<h1 n:inner-block="title">
+  Dluhy
+</h1>
+
+{snippet dluznici}
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th>Kupec</th>
+    <th>Dluh</th>
+  </tr>
+</thead>
+<tbody>
+  <tr n:foreach="$kupci as $kupec">
+    <td>{$kupec->jmeno}</td>
+    <td><a n:if="$kupec->dluh" title="{$kupec->jmeno}" n:href="splatitDluh!, $kupec->jmeno, $kupec->dluh" class="ajax btn btn-primary">{$kupec->dluh} Kč</a></td>
+  </tr>
+</tbody>
+</table>
+{/snippet}

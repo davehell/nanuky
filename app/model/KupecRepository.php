@@ -16,6 +16,6 @@ class KupecRepository extends Repository
    */
   public function seznamKupcu()
   {
-    return $this->findAll()->fetchPairs('jmeno', 'jmeno');
+    return $this->findAll()->order('jmeno')->fetchPairs('jmeno', 'jmeno');
   }
 }

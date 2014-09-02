@@ -29,18 +29,21 @@
   <div class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" n:href="Mrazak: null">Nanuky</a>
+        <a class="navbar-brand" n:href="Mrazak:">Nanuky</a>
       </div>
 
-      <ul class="nav navbar-nav navbar-left">
-        <li n:if="$kupec" class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zákazník {$kupec->jmeno} <span class="caret"></span></a>
-          <ul class="dropdown-menu" n:inner-foreach="$kupci as $id => $jmeno">
+      <ul n:if="$uziv" class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zákazník {$uziv->jmeno} <span class="caret"></span></a>
+          <ul class="dropdown-menu" n:inner-foreach="$seznamKupcu as $id => $jmeno">
             <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
           </ul>
         </li>
-        <li n:if="$kupec" n:snippet="dluh"><a href="#">Úvěr: {$kupec->dluh}&nbsp;Kč</a></li>
-        <li n:if="$kupec && $kupec->jmeno == 'DHE'"><a n:href="Mrazak:pridat">Přidat nanuky</a></li>
+        <li n:snippet="dluh"><a href="#">Úvěr: {$uziv->dluh}&nbsp;Kč</a></li>
+        {if $uziv->jmeno == "DHE"}
+        <li><a n:href="Mrazak:pridat">Přidat nanuky</a></li>
+        <li><a n:href="Mrazak:dluhy">Dluhy</a></li>
+        {/if}
       </ul>
     </div>
   </div>

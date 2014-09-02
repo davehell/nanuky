@@ -18,8 +18,8 @@ class RouterFactory
   public function createRouter()
   {
     $router = new RouteList();
-    $router[] = new Route('<zakaznik>', 'Mrazak:default');
-    $router[] = new Route('<presenter>/<action>', 'Mrazak:default');
+    $router[] = new Route('<uziv [a-zA-Z]{3}>', 'Mrazak:default');
+    $router[] = new Route('<action>', 'Mrazak:default');
     return $router;
   }
 

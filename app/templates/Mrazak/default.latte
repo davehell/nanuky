@@ -1,11 +1,11 @@
 {block content}
 
-{if !$kupec}
+{if !$uziv}
 <div class="alert alert-danger">Ha! Neznámý zákazník.</div>
 <p>
   A ty jsi kdo?
 </p>
-<ul id="kupci" n:inner-foreach="$kupci as $id => $jmeno">
+<ul id="kupci" n:inner-foreach="$seznamKupcu as $id => $jmeno">
   <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
 </ul>
 {else}
@@ -17,7 +17,7 @@
     <table id="mrazak" class="table table-striped">
       <tbody>
       <tr n:foreach="$nanuky as $nanuk">
-      <td><a n:href="koupit!, $nanuk->nanuky_id, $kupec->jmeno" class="ajax btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a>
+      <td><a n:href="koupit!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a>
       {$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span></td>
       </tr>
       </tbody>

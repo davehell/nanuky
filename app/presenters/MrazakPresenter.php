@@ -33,21 +33,14 @@ final class MrazakPresenter extends BasePresenter
    */
   public $kupec;
 
-  public function renderDefault($zakaznik = null)
+  /**
+   * @param string kupec
+   */
+  public function renderDefault($uziv = null)
   {
+    $this->template->uziv = $this->kupec->get(strtoupper($uziv));
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');
-  }
-
-  public function renderKoupit($nanuk, $zakaznik = null)
-  {
-    $mrazak = $this->mrazak->volnyNanuk($nanuk);
-    $this['nakupForm']->setDefaults(array(
-      "kupec" => $zakaznik,
-      "id" => $mrazak->id,
-      "nazev" => $mrazak->nazev,
-      "cena_prodej" => $mrazak->cena
-    ));
   }
 
   public function renderPridat()
@@ -55,16 +48,20 @@ final class MrazakPresenter extends BasePresenter
     $this->template->velikostBaleni = $this->nanuk->findAll()->fetchPairs('id', 'baleni');
   }
 
+  public function renderDluhy()
+  {
+    $this->template->kupci = $this->kupec->findAll();
+  }
 
   /**
-   * @param int
+   * @param int druh nanuku
+   * @param string kupec
    */
-  public function handleKoupit($nanuk, $zakaznik)
+  public function handleKoupit($nanuk, $kupec)
   {
     $mrazak = $this->mrazak->volnyNanuk($nanuk);
-    $this->koupitNanuk($zakaznik, $mrazak->id);
+    $this->koupitNanuk($kupec, $mrazak->id);
 
-    $kupec = $this->kupec->get($zakaznik);
     $this->flashMessage('Zakoupen nanuk ' . $mrazak->nazev . ' za ' . $mrazak->cena . ' Kč', 'success');
     if ($this->isAjax()) {
       $this->invalidateControl('mrazak');
@@ -72,7 +69,20 @@ final class MrazakPresenter extends BasePresenter
       $this->invalidateControl('flash');
     }
   }
-  
+
+  /**
+   * @param string kupec
+   * @param int zpalacená částka
+   */
+  public function handleSplatitDluh($kupec, $castka)
+  {
+    $uziv = $this->kupec->get($kupec);
+    $this->flashMessage($uziv->jmeno. ' zaplatil ' . $castka . ' Kč', 'success');
+    if ($this->isAjax()) {
+      $this->invalidateControl('dluznici');
+      $this->invalidateControl('flash');
+    }
+  }
   
   /**
    * Formulář pro přidání nanuku na mražák

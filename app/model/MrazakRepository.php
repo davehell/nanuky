@@ -37,4 +37,13 @@ class MrazakRepository extends Repository
   {
     return $this->database->table('volne_nanuky')->where('nanuky_id=?', $id)->order('id')->fetch();
   }
+
+  /**
+   * Poslední nákupy
+   * @return \Nette\Database\Table\Selection
+   */
+  public function posledniNakupy()
+  {
+    return $this->findAll()->where('datum IS NOT NULL')->order('datum DESC')->limit(20);
+  }
 }

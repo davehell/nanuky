@@ -59,6 +59,11 @@ final class MrazakPresenter extends BasePresenter
     }
   }
 
+  public function renderNakupy()
+  {
+    $this->template->nakupy = $this->mrazak->posledniNakupy();
+  }
+
   /**
    * @param int druh nanuku
    * @param string kupec
@@ -90,6 +95,21 @@ final class MrazakPresenter extends BasePresenter
     $this->flashMessage($uziv->jmeno. ' zaplatil ' . $castka . ' Kč', 'success');
     if ($this->isAjax()) {
       $this->invalidateControl('dluznici');
+      $this->invalidateControl('flash');
+    }
+  }
+
+  /**
+   * @param int ID nakupu
+   */
+  public function handleStorno($id)
+  {
+    $this->zrusitNakup($id);
+    $nakup = $this->mrazak->get($id);
+
+    $this->flashMessage('Nákup byl zrušen.', 'success');
+    if ($this->isAjax()) {
+      $this->invalidateControl('nakupy');
       $this->invalidateControl('flash');
     }
   }
@@ -155,7 +175,8 @@ final class MrazakPresenter extends BasePresenter
 
   /**
    * Fasáda pro zakoupení nanuku
-   * @param $values[]
+   * @param string
+   * @param int
    */
   private function koupitNanuk($jmeno, $mrazakId)
   {
@@ -164,5 +185,18 @@ final class MrazakPresenter extends BasePresenter
 
     $nanuk->update(array('kupec' => $jmeno, 'datum' => date('Y-m-d H:i:s')));
     $kupec->update(array('dluh' => $kupec->dluh + $nanuk->cena_prodej));
+  }
+
+  /**
+   * Fasáda pro zrušení nákupu
+   * @param int
+   */
+  private function zrusitNakup($id)
+  {
+    $nakup = $this->mrazak->get($id);
+    $kupec = $this->kupec->get($nakup->kupec);
+
+    $nakup->update(array('kupec' => null, 'datum' => null));
+    $kupec->update(array('dluh' => $kupec->dluh - $nakup->cena_prodej));
   }
 }

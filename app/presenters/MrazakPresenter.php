@@ -33,10 +33,20 @@ final class MrazakPresenter extends BasePresenter
    */
   public $kupec;
 
+  public function beforeRender()
+  {
+    $this->template->uziv = null;
+  }
+
   /**
    * @param string kupec
    */
-  public function renderDefault($uziv = null)
+  public function renderDefault()
+  {
+    $this->template->seznamKupcu = $this->kupec->seznamKupcu();
+  }
+
+  public function renderNabidka($uziv)
   {
     $kupec = $this->kupec->get(strtoupper($uziv));
     $this->template->uziv = $kupec;

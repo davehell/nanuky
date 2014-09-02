@@ -39,7 +39,7 @@
             <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
           </ul>
         </li>
-        <li n:snippet="dluh"><a href="#">Úvěr: {$dluh}&nbsp;Kč</a></li>
+        <li n:snippet="dluh"><a href="#" class="alert-{if $dluh < 50}info{elseif $dluh < 100}warning{else}danger{/if}">Úvěr: {$dluh}&nbsp;Kč</a></li>
         {if $uziv->jmeno == "DHE"}
         <li><a n:href="Mrazak:pridat">Naskladnění</a></li>
         <li><a n:href="Mrazak:dluhy">Dluhy</a></li>

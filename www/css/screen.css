@@ -1,7 +1,6 @@
 .navbar-brand {
-  background-image: url('../images/brand2.png');
-  background-repeat: no-repeat;
-  padding-left: 60px;
+  background: url('../images/nanuk-maly.png') 5px 5px no-repeat;
+  padding-left: 50px;
 }
 #snippet--dluh a {
   color: #000;

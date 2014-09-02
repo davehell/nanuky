@@ -3,7 +3,9 @@
   background-repeat: no-repeat;
   padding-left: 60px;
 }
-
+#snippet--dluh a {
+  color: #000;
+}
 .table > tbody > tr > td {
   vertical-align: middle;
 }

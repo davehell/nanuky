@@ -34,13 +34,7 @@
       </div>
 
       <ul n:if="$uziv" class="nav navbar-nav navbar-left">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zákazník {$uziv->jmeno} <span class="caret"></span></a>
-          <ul class="dropdown-menu" n:inner-foreach="$seznamKupcu as $id => $jmeno">
-            <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
-          </ul>
-        </li>
-        <li n:snippet="dluh"><a href="#" class="alert-{if $dluh < 50}info{elseif $dluh < 100}warning{else}danger{/if}">Úvěr: {$dluh}&nbsp;Kč</a></li>
+        <li n:snippet="dluh"><a href="#" class="alert-{if $dluh < 50}info{elseif $dluh < 100}warning{else}danger{/if}">{$uziv->jmeno} - <span>úvěr: {$dluh}&nbsp;Kč</span></a></li>
         {if $uziv->jmeno == "DHE"}
         <li><a n:href="Mrazak:pridat">Naskladnění</a></li>
         <li><a n:href="Mrazak:dluhy">Dluhy</a></li>

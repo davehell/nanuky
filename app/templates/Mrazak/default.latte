@@ -1,10 +1,8 @@
 {block content}
 
 {if !$uziv}
-<div class="alert alert-danger">Ha! Neznámý zákazník.</div>
-<p>
-  A ty jsi kdo?
-</p>
+<div class="alert alert-danger">A ty jsi kdo?</div>
+
 <ul id="kupci" n:inner-foreach="$seznamKupcu as $id => $jmeno">
   <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
 </ul>
@@ -15,11 +13,17 @@
   {if $nanuky->count()}
     {snippet mrazak}
     <table id="mrazak" class="table table-striped">
+      <thead>
+        <tr>
+          <th class="col-xs-1">Cena</th>
+          <th>Nanuk</th>
+        </tr>
+      </thead>
       <tbody>
-      <tr n:foreach="$nanuky as $nanuk">
-      <td><a n:href="koupit!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a>
-      {$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span></td>
-      </tr>
+        <tr n:foreach="$nanuky as $nanuk">
+        <td><a title="Tohle chci!" n:href="nakup!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a></td>
+        <td>{$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span></td>
+        </tr>
       </tbody>
     </table>
     {/snippet}

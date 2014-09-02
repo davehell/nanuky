@@ -9,9 +9,9 @@
 .alert {
   margin-top: 20px;
 }
-#mrazak td {
+#mrazak td, #dluznici td {
   vertical-align: middle;
 }
-#mrazak td a.btn{
-  margin-right: 20px;
+#mrazak a.btn, #dluznici a.btn{
+  width: 100%;
 }

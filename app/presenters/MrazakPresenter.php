@@ -50,14 +50,14 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderDluhy()
   {
-    $this->template->kupci = $this->kupec->findAll();
+    $this->template->kupci = $this->kupec->findAll()->order('jmeno');
   }
 
   /**
    * @param int druh nanuku
    * @param string kupec
    */
-  public function handleKoupit($nanuk, $kupec)
+  public function handleNakup($nanuk, $kupec)
   {
     $mrazak = $this->mrazak->volnyNanuk($nanuk);
     $this->koupitNanuk($kupec, $mrazak->id);
@@ -72,11 +72,15 @@ final class MrazakPresenter extends BasePresenter
 
   /**
    * @param string kupec
-   * @param int zpalacená částka
    */
-  public function handleSplatitDluh($kupec, $castka)
+  public function handleDluh($kupec)
   {
     $uziv = $this->kupec->get($kupec);
+    $castka = $uziv->dluh;
+    $uziv->update(array(
+      "dluh" => 0,
+      "zaplaceno" => $uziv->zaplaceno + $castka
+    ));
     $this->flashMessage($uziv->jmeno. ' zaplatil ' . $castka . ' Kč', 'success');
     if ($this->isAjax()) {
       $this->invalidateControl('dluznici');

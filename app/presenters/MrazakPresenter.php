@@ -38,7 +38,9 @@ final class MrazakPresenter extends BasePresenter
    */
   public function renderDefault($uziv = null)
   {
-    $this->template->uziv = $this->kupec->get(strtoupper($uziv));
+    $kupec = $this->kupec->get(strtoupper($uziv));
+    $this->template->uziv = $kupec;
+    $this->template->dluh = $kupec ? $this->kupec->zaokrouhliDluh($kupec->dluh) : 0;
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');
   }
@@ -50,7 +52,11 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderDluhy()
   {
-    $this->template->kupci = $this->kupec->findAll()->order('jmeno');
+    $kupci = $this->kupec->findAll()->order('jmeno');
+    $this->template->kupci = array();
+    foreach ($kupci as $kupec) {
+      $this->template->kupci[$kupec->jmeno] = $this->kupec->zaokrouhliDluh($kupec->dluh);
+    }
   }
 
   /**

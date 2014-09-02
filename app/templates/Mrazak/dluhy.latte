@@ -13,9 +13,9 @@
   </tr>
 </thead>
 <tbody>
-  <tr n:foreach="$kupci as $kupec">
-    <td><a n:if="$kupec->dluh" title="{$kupec->jmeno}" n:href="dluh!, $kupec->jmeno" class="ajax btn btn-primary">{$kupec->dluh} Kč</a></td>
-    <td>{$kupec->jmeno}</td>
+  <tr n:foreach="$kupci as $jmeno => $dluh">
+    <td><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax btn btn-primary">{$dluh} Kč</a></td>
+    <td>{$jmeno}</td>
   </tr>
 </tbody>
 </table>

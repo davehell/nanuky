@@ -74,7 +74,6 @@ CREATE VIEW "volne_nanuky" AS
 SELECT mrazak.id as id, nanuky.id as nanuky_id, nanuky.nazev , cena_prodej as cena
 FROM nanuky, mrazak
 WHERE mrazak.nanuky_id = nanuky.id
-AND mrazak.kupec IS NULL
-AND mrazak.cena_prodej > 0;
+AND mrazak.datum IS NULL;
 
 -- 

@@ -12,6 +12,6 @@
 #mrazak td, #dluznici td {
   vertical-align: middle;
 }
-#mrazak a.btn, #dluznici a.btn{
+#mrazak a.btn-default, #dluznici a.btn-default{
   width: 100%;
 }

@@ -71,7 +71,7 @@ final class MrazakPresenter extends BasePresenter
   public function handleNakup($nanuk, $kupec)
   {
     $mrazak = $this->mrazak->volnyNanuk($nanuk);
-    $this->koupitNanuk($kupec, $mrazak->id);
+    $this->koupitNanuk($mrazak->id, $kupec);
 
     $this->flashMessage('Zakoupen nanuk ' . $mrazak->nazev . ' za ' . $mrazak->cena . ' Kč', 'success');
     if ($this->isAjax()) {
@@ -178,13 +178,17 @@ final class MrazakPresenter extends BasePresenter
    * @param string
    * @param int
    */
-  private function koupitNanuk($jmeno, $mrazakId)
+  private function koupitNanuk($mrazakId, $jmeno = null)
   {
-    $nanuk = $this->mrazak->get($mrazakId);
-    $kupec = $this->kupec->get($jmeno);
+    $nakup = $this->mrazak->get($mrazakId);
+    $dataNakup = array(
+      'kupec' => $jmeno,
+      'datum' => date('Y-m-d H:i:s')
+    );
+    $nakup->update($dataNakup);
 
-    $nanuk->update(array('kupec' => $jmeno, 'datum' => date('Y-m-d H:i:s')));
-    $kupec->update(array('dluh' => $kupec->dluh + $nanuk->cena_prodej));
+    $kupec = $this->kupec->get($jmeno);
+    if($kupec) $kupec->update(array('dluh' => $kupec->dluh + $nakup->cena_prodej));
   }
 
   /**
@@ -197,6 +201,6 @@ final class MrazakPresenter extends BasePresenter
     $kupec = $this->kupec->get($nakup->kupec);
 
     $nakup->update(array('kupec' => null, 'datum' => null));
-    $kupec->update(array('dluh' => $kupec->dluh - $nakup->cena_prodej));
+    if($kupec) $kupec->update(array('dluh' => $kupec->dluh - $nakup->cena_prodej));
   }
 }

@@ -43,6 +43,7 @@ final class MrazakPresenter extends BasePresenter
     $this->template->dluh = $kupec ? $this->kupec->zaokrouhliDluh($kupec->dluh) : 0;
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');
+    $this->template->oblibene = $this->mrazak->oblibene($uziv);
   }
 
   public function renderPridat()

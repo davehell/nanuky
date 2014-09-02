@@ -46,4 +46,20 @@ class MrazakRepository extends Repository
   {
     return $this->findAll()->where('datum IS NOT NULL')->order('datum DESC')->limit(20);
   }
+
+  /**
+   * Kupcovy oblíbené nanuky
+   * @param string
+   * @return array
+   */
+  public function oblibene($kupec)
+  {
+    if(!$kupec) return array();
+    $nanuky = $this->findAll()->select('nanuky_id AS id, count(nanuky_id) AS obliba')->where('kupec=?', $kupec)->group('nanuky_id')->order('obliba DESC')->limit(2);
+    $oblibene = array();
+    foreach($nanuky as $nanuk) {
+      $oblibene[] = $nanuk->id;
+    }
+    return $oblibene;
+  }
 }

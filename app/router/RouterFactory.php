@@ -3,7 +3,7 @@
 namespace App;
 
 use Nette\Application\Routers\RouteList,
-	Nette\Application\Routers\Route;
+  Nette\Application\Routers\Route;
 
 
 /**
@@ -12,14 +12,15 @@ use Nette\Application\Routers\RouteList,
 class RouterFactory
 {
 
-	/**
-	 * @return \Nette\Application\IRouter
-	 */
-	public function createRouter()
-	{
-		$router = new RouteList();
-		$router[] = new Route('<presenter>/<action>[/<id>]', 'Homepage:default');
-		return $router;
-	}
+  /**
+   * @return \Nette\Application\IRouter
+   */
+  public function createRouter()
+  {
+    $router = new RouteList();
+    $router[] = new Route('<zakaznik>', 'Mrazak:default');
+    $router[] = new Route('<presenter>/<action>', 'Mrazak:default');
+    return $router;
+  }
 
 }

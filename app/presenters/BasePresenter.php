@@ -23,6 +23,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 
   public function beforeRender()
   {
+    $this->zakaznik = strtoupper($this->zakaznik);
     $this->template->kupci = $this->kupec->seznamKupcu();
     $kupec = $this->kupec->get($this->zakaznik);
     $this->template->kupec = $kupec;

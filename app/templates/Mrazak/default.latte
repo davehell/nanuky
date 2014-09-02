@@ -3,8 +3,8 @@
 {if !$uziv}
 <div class="alert alert-danger">A ty jsi kdo?</div>
 
-<ul id="kupci" n:inner-foreach="$seznamKupcu as $id => $jmeno">
-  <li><a n:href="Mrazak:, $jmeno">{$jmeno}</a></li>
+<ul id="kupci" class="list-inline" n:inner-foreach="$seznamKupcu as $id => $jmeno">
+  <li class="col-xs-2"><a class="btn btn-default btn-lg" n:href="Mrazak: $jmeno">{$jmeno}</a></li>
 </ul>
 {else}
   <h1 n:inner-block="title">
@@ -23,7 +23,7 @@
         <tr n:foreach="$nanuky as $nanuk">
           {? $jeOblibeny = in_array($nanuk->nanuky_id, $oblibene);}
           <td>
-            <a title="{$jeOblibeny ? 'Koupit můj oblíbený nanuk!' : 'Za tohle chci utratit svých {$ceny[$nanuk->nanuky_id]} Kč!'}" n:href="nakup!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-{$jeOblibeny ? 'success' : 'primary'} btn-block">
+            <a n:href="nakup!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-{$jeOblibeny ? 'success' : 'primary'} btn-block" title="{$jeOblibeny ? 'Koupit můj oblíbený nanuk!' : 'Za tohle chci utratit svých {$ceny[$nanuk->nanuky_id]} Kč!'}">
               <span class="glyphicon glyphicon-{$jeOblibeny ? 'star' : 'shopping-cart'}"></span> {$ceny[$nanuk->nanuky_id]}&nbsp;Kč
             </a>
           </td>

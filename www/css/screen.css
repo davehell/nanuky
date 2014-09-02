@@ -7,3 +7,6 @@
 .table > tbody > tr > td {
   vertical-align: middle;
 }
+#kupci li {
+  line-height: 5em;
+}

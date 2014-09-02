@@ -64,16 +64,3 @@ DROP TABLE IF EXISTS "sqlite_sequence";
 CREATE TABLE sqlite_sequence(name,seq);
 
 INSERT INTO "sqlite_sequence" ("name", "seq") VALUES ('nanuky',	'9');
-
-DROP VIEW IF EXISTS "volne_nanuky";
-CREATE TABLE "volne_nanuky" ("id" integer, "nanuky_id" integer, "nazev" text, "cena" integer);
-
-
-DROP TABLE IF EXISTS "volne_nanuky";
-CREATE VIEW "volne_nanuky" AS
-SELECT mrazak.id as id, nanuky.id as nanuky_id, nanuky.nazev , cena_prodej as cena
-FROM nanuky, mrazak
-WHERE mrazak.nanuky_id = nanuky.id
-AND mrazak.datum IS NULL;
-
--- 

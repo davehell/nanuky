@@ -21,15 +21,15 @@
       </thead>
       <tbody>
         <tr n:foreach="$nanuky as $nanuk">
-          {? $jeOblibeny = in_array($nanuk->nanuky_id, $oblibene);}
+          {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
           <td>
-            <a n:href="nakup!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-{$jeOblibeny ? 'success' : 'primary'} btn-block" title="{$jeOblibeny ? 'Koupit můj oblíbený nanuk!' : 'Za tohle chci utratit svých {$ceny[$nanuk->nanuky_id]} Kč!'}">
-              <span class="glyphicon glyphicon-{$jeOblibeny ? 'star' : 'shopping-cart'}"></span> {$ceny[$nanuk->nanuky_id]}&nbsp;Kč
+            <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="ajax btn btn-{$jeOblibeny ? 'success' : 'primary'} btn-block" title="{if $jeOblibeny}Koupit můj oblíbený nanuk!{else}Za tohle chci utratit svých {$ceny[$nanuk->id]} Kč!{/if}">
+              <span class="glyphicon glyphicon-{$jeOblibeny ? 'star' : 'shopping-cart'}"></span> {$ceny[$nanuk->id]}&nbsp;Kč
             </a>
           </td>
           <td>
             {$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span>
-            <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->nanuky_id" class="ajax btn btn-warning btn-xs pull-right"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+            <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-warning btn-xs pull-right"><span class="glyphicon glyphicon-thumbs-down"></span></a>
           </td>
         </tr>
       </tbody>

@@ -12,30 +12,31 @@ class MrazakRepository extends Repository
   protected $table = 'mrazak';
 
   /**
-   * Počty nanuků v mražáku.
+   * Počty a názvy nanuků v mražáku.
    * @return \Nette\Database\Table\Selection
    */
   public function inventura()
   {
-    return $this->database->table('volne_nanuky')->select('nanuky_id, nazev, count(nanuky_id) AS pocet')->group('nanuky_id')->order('nazev');
+    return $this->findAll()->where('datum_nakupu IS NULL')->select('nanuky_id AS id, nanuky.nazev, count(nanuky_id) AS pocet')->group('nanuky_id')->order('nanuky.nazev');
   }
 
   /**
    * Ceny nanuků v mražáku.
-   * @return \Nette\Database\Table\Selection
+   * @return array
    */
   public function cenik()
   {
-    return $this->database->table('volne_nanuky')->select('DISTINCT nanuky_id, cena')->order('id DESC');
+    return $this->findAll()->where('datum_nakupu IS NULL')->select('DISTINCT nanuky_id AS id, cena_prodej AS cena')->order('id DESC')->fetchPairs('id', 'cena');
   }
 
   /**
+   * První dostupný nanuk daného druhu, který je v mražáku.
    * @param int druh nanuku
    * @return \Nette\Database\Table\ActiveRow|FALSE
    */
   public function volnyNanuk($id)
   {
-    return $this->database->table('volne_nanuky')->where('nanuky_id=?', $id)->order('id')->fetch();
+    return $this->findAll()->select('mrazak.id, nanuky.nazev, cena_prodej AS cena')->where('datum_nakupu IS NULL')->where('nanuky_id=?', $id)->order('mrazak.id')->fetch();
   }
 
   /**
@@ -44,7 +45,7 @@ class MrazakRepository extends Repository
    */
   public function posledniNakupy()
   {
-    return $this->findAll()->where('datum IS NOT NULL')->order('datum DESC')->limit(20);
+    return $this->findAll()->where('datum_nakupu IS NOT NULL')->order('datum_nakupu DESC')->limit(20);
   }
 
   /**

@@ -42,7 +42,7 @@ final class MrazakPresenter extends BasePresenter
     $this->template->uziv = $kupec;
     $this->template->dluh = $kupec ? $this->kupec->zaokrouhliDluh($kupec->dluh) : 0;
     $this->template->nanuky = $this->mrazak->inventura();
-    $this->template->ceny = $this->mrazak->cenik()->fetchPairs('nanuky_id', 'cena');
+    $this->template->ceny = $this->mrazak->cenik();
     $this->template->oblibene = $this->mrazak->oblibene($uziv);
   }
 
@@ -184,7 +184,7 @@ final class MrazakPresenter extends BasePresenter
     $nakup = $this->mrazak->get($mrazakId);
     $dataNakup = array(
       'kupec' => $jmeno,
-      'datum' => date('Y-m-d H:i:s')
+      'datum_nakupu' => date('Y-m-d H:i:s')
     );
     $nakup->update($dataNakup);
 
@@ -201,7 +201,7 @@ final class MrazakPresenter extends BasePresenter
     $nakup = $this->mrazak->get($id);
     $kupec = $this->kupec->get($nakup->kupec);
 
-    $nakup->update(array('kupec' => null, 'datum' => null));
+    $nakup->update(array('kupec' => null, 'datum_nakupu' => null));
     if($kupec) $kupec->update(array('dluh' => $kupec->dluh - $nakup->cena_prodej));
   }
 }

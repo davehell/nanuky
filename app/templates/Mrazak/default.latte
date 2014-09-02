@@ -4,7 +4,7 @@
 <div class="alert alert-danger">A ty jsi kdo?</div>
 
 <ul id="kupci" class="list-inline" n:inner-foreach="$seznamKupcu as $id => $jmeno">
-  <li class="col-xs-2"><a class="btn btn-default btn-lg" n:href="Mrazak: $jmeno">{$jmeno}</a></li>
+  <li class="col-sm-2"><a class="btn btn-default btn-lg" n:href="Mrazak: $jmeno">{$jmeno}</a></li>
 </ul>
 {else}
   <h1 n:inner-block="title">
@@ -15,8 +15,8 @@
     <table id="mrazak" class="table table-striped table-hover">
       <thead>
         <tr>
-          <th class="col-xs-1">Cena</th>
-          <th class="col-xs-1">Skladem</th>
+          <th class="col-sm-1">Cena</th>
+          <th class="col-sm-1">Skladem</th>
           <th>Nanuk</th>
         </tr>
       </thead>

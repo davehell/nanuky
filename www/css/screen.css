@@ -3,15 +3,7 @@
   background-repeat: no-repeat;
   padding-left: 60px;
 }
-.navbar {
-  margin-bottom: 0;
-}
-.alert {
-  margin-top: 20px;
-}
-#mrazak td, #dluznici td {
+
+.table > tbody > tr > td {
   vertical-align: middle;
-}
-#mrazak a.btn-default, #dluznici a.btn-default{
-  width: 100%;
 }

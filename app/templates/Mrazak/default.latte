@@ -21,7 +21,7 @@
       </thead>
       <tbody>
         <tr n:foreach="$nanuky as $nanuk">
-          <td><a title="Za tohle chci utratit svých {$ceny[$nanuk->nanuky_id]} Kč!" n:href="nakup!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a></td>
+          <td><a title="Za tohle chci utratit svých {$ceny[$nanuk->nanuky_id]} Kč!" n:href="nakup!, $nanuk->nanuky_id, $uziv->jmeno" class="ajax btn btn-primary btn-block"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;&nbsp;{$ceny[$nanuk->nanuky_id]}&nbsp;Kč</a></td>
           <td>
             {$nanuk->nazev}&nbsp;<span class="badge alert-{$nanuk->pocet <= 3 ? 'danger' : 'info'}">{$nanuk->pocet}&nbsp;ks</span>
             <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->nanuky_id" class="ajax btn btn-warning btn-xs pull-right"><span class="glyphicon glyphicon-thumbs-down"></span></a>

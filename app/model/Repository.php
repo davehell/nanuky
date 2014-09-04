@@ -24,6 +24,18 @@ abstract class Repository extends Object
 		$this->database = $database;
 	}
 
+	public function beginTransaction()
+	{
+		$this->database->beginTransaction();
+	}
+	public function rollbackTransaction()
+	{
+		$this->database->rollback();
+	}
+	public function commitTransaction()
+	{
+		$this->database->commit();
+	}
 
 	/** 
 	 * Vrátí všechny platné záznamy

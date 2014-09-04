@@ -6,7 +6,8 @@ use App\Model\NanukRepository,
     App\Model\MrazakRepository,
     App\Model\KupecRepository,
     Nette\Application\UI\Form,
-    Nextras\Forms\Rendering\Bs3FormRenderer;
+    Nextras\Forms\Rendering\Bs3FormRenderer,
+    NanukyException;
 
 
 /**
@@ -81,10 +82,21 @@ final class MrazakPresenter extends BasePresenter
    */
   public function handleNakup($nanuk, $kupec)
   {
-    $mrazak = $this->mrazak->volnyNanuk($nanuk);
-    $this->koupitNanuk($mrazak->id, $kupec);
+    $konkretniKus = $this->mrazak->volnyNanuk($nanuk);
 
-    $this->flashMessage('Zakoupen nanuk ' . $mrazak->nazev . ' za ' . $mrazak->cena . ' Kč', 'success');
+    if($konkretniKus) {
+      try {
+        $this->koupitNanuk($konkretniKus->id, $kupec);
+        $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
+      }
+      catch(NanukyException $e) {
+        $this->flashMessage($e->getMessage(), 'danger');
+      }
+    }
+    else {
+      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'warning');
+    }
+
     if ($this->isAjax()) {
       $this->invalidateControl('mrazak');
       $this->invalidateControl('dluh');
@@ -192,14 +204,28 @@ final class MrazakPresenter extends BasePresenter
   private function koupitNanuk($mrazakId, $jmeno = null)
   {
     $nakup = $this->mrazak->get($mrazakId);
+    $kupec = $this->kupec->get($jmeno);
+
+    if(!$kupec) throw new NanukyException('Žádný zákazník se jménem "' . $jmeno . '" neexistuje.');
+
     $dataNakup = array(
       'kupec' => $jmeno,
       'datum_nakupu' => date('Y-m-d H:i:s')
     );
-    $nakup->update($dataNakup);
+    $dataKupec = array(
+      'dluh' => $kupec->dluh + $nakup->cena_prodej
+    );
 
-    $kupec = $this->kupec->get($jmeno);
-    if($kupec) $kupec->update(array('dluh' => $kupec->dluh + $nakup->cena_prodej));
+    try {
+      $this->mrazak->beginTransaction();
+      $nakup->update($dataNakup);
+      $kupec->update($dataKupec);
+      $this->mrazak->commitTransaction();
+    }
+    catch(\PDOException $e) {
+      $this->mrazak->rollbackTransaction();
+      throw new NanukyException('Chybička se vloudila. Nákup se nepodařil.');
+    }
   }
 
   /**

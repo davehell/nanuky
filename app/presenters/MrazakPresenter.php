@@ -86,8 +86,14 @@ final class MrazakPresenter extends BasePresenter
 
     if($konkretniKus) {
       try {
-        $this->koupitNanuk($konkretniKus->id, $kupec);
-        $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
+        if($kupec) {
+          $this->koupitNanuk($konkretniKus->id, $kupec);
+          $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
+        }
+        else {
+          $this->odepsatNanuk($konkretniKus->id);
+          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
+        }
       }
       catch(NanukyException $e) {
         $this->flashMessage($e->getMessage(), 'danger');
@@ -198,10 +204,10 @@ final class MrazakPresenter extends BasePresenter
 
   /**
    * Fasáda pro zakoupení nanuku
-   * @param string
-   * @param int
+   * @param int druh nanuku
+   * @param string jméno kupce
    */
-  private function koupitNanuk($mrazakId, $jmeno = null)
+  private function koupitNanuk($mrazakId, $jmeno)
   {
     $nakup = $this->mrazak->get($mrazakId);
     $kupec = $this->kupec->get($jmeno);
@@ -224,6 +230,27 @@ final class MrazakPresenter extends BasePresenter
     }
     catch(\PDOException $e) {
       $this->mrazak->rollbackTransaction();
+      throw new NanukyException('Chybička se vloudila. Nákup se nepodařil.');
+    }
+  }
+
+  /**
+   * Fasáda pro odepsání nanuku
+   * @param int druh nanuku
+   */
+  private function odepsatNanuk($mrazakId)
+  {
+    $nakup = $this->mrazak->get($mrazakId);
+
+    $dataNakup = array(
+      'kupec' => null,
+      'datum_nakupu' => date('Y-m-d H:i:s')
+    );
+
+    try {
+      $nakup->update($dataNakup);
+    }
+    catch(\PDOException $e) {
       throw new NanukyException('Chybička se vloudila. Nákup se nepodařil.');
     }
   }

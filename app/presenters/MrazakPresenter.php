@@ -264,7 +264,26 @@ final class MrazakPresenter extends BasePresenter
     $nakup = $this->mrazak->get($id);
     $kupec = $this->kupec->get($nakup->kupec);
 
-    $nakup->update(array('kupec' => null, 'datum_nakupu' => null));
-    if($kupec) $kupec->update(array('dluh' => $kupec->dluh - $nakup->cena_prodej));
+    $dataNakup = array(
+      'kupec' => null,
+      'datum_nakupu' => null
+    );
+
+    if($kupec) {
+      $dataKupec = array(
+        'dluh' => $kupec->dluh - $nakup->cena_prodej
+      );
+    }
+
+    try {
+      $this->mrazak->beginTransaction();
+      $nakup->update($dataNakup);
+      if($kupec) $kupec->update($dataKupec);
+      $this->mrazak->commitTransaction();
+    }
+    catch(\PDOException $e) {
+      $this->mrazak->rollbackTransaction();
+      throw new NanukyException('Chybička se vloudila. Nákup se nepodařil.');
+    }
   }
 }

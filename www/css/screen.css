@@ -21,14 +21,15 @@
   padding-bottom: 10px;
   text-align: left;
 }
-#nabidka a {
-  text-decoration: none;
-}
 #nabidka .image {
+  cursor: pointer;
   height: 180px;
   overflow: hidden;
   position: relative;
   text-align: center;
+}
+#nabidka .image a{
+  display: none;
 }
 #nabidka .labels {
   position: absolute;

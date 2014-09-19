@@ -8,21 +8,20 @@
   <div id="nabidka" class="row">
     <div n:foreach="$nanuky as $nanuk" class="col-xs-12 col-md-3">
       {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
-      <div class="image">
-        <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="obr" title="Koupit za {$ceny[$nanuk->id]} Kč">
-          <h3>{$nanuk->nazev}</h3>
-          <img height="120px" width="190px" src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
-        </a>
+      <div class="image" data-cena="{$ceny[$nanuk->id]} Kč">
+        <h3>{$nanuk->nazev}</h3>
+        <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="btn btn-success btn-lg">Koupit</a>
+        <img height="120px" width="190px" src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
         <div class="labels">
           <span n:if="$jeOblibeny" class="label label-success">oblíbený</span>
         </div>
       </div>
       <p class="info">
-        <span class="pull-left">
-          {$ceny[$nanuk->id]} Kč
+        <span class="cena pull-left">{$ceny[$nanuk->id]} Kč</span>
+        <span class="pull-right">
           <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+          {$nanuk->pocet} ks
         </span>
-        <span class="pull-right">{$nanuk->pocet} ks</span>
         <span class="clearfix"></span>
       </p>
     </div>
@@ -31,3 +30,22 @@
     <div class="alert alert-warning">Jdeš pozdě! Mražák je prázdný.</div>
   {/if}
 {/snippet}
+
+
+<div id="myModal" class="modal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">{$uziv->jmeno} kupuje nanuk</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <span id="nanuk"></span> za <span id="cena"></span>
+        </p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

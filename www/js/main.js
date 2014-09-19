@@ -10,14 +10,22 @@ $( "#frm-nanukForm-cena" ).change(function() {
   $( "#frm-nanukForm-cena_prodej" ).val("");
 });
 
-$( "#frm-nanukForm-nanuky_id" ).change(function() {
-  var cenaBaleni = parseFloat($( "#frm-nanukForm-cena" ).val());
-  var pocetKusu = velikostiBaleni[this.value];
+function nastavCeny(pocetKusu) {
+  var cenaBaleni = parseFloat(($( "#frm-nanukForm-cena" ).val()).replace(/,/g, "."));
   var cenaNakup = (cenaBaleni / pocetKusu).toFixed(2);
-  //cenaNakup = Math.ceil(cenaNakup * 10) / 10;
   var cenaProdej = Math.ceil(cenaNakup);
-  $( "#frm-nanukForm-pocet" ).val(pocetKusu);
   $( "#frm-nanukForm-cena_nakup" ).val(cenaNakup);
   $( "#frm-nanukForm-cena_prodej" ).val(cenaProdej);
+}
+
+$( "#frm-nanukForm-nanuky_id" ).change(function() {
+  var pocetKusu = velikostiBaleni[this.value];
+  $( "#frm-nanukForm-pocet" ).val(pocetKusu);
+  nastavCeny(pocetKusu);
+});
+
+$( "#frm-nanukForm-pocet" ).change(function() {
+  var pocetKusu = $( this ).val();
+  nastavCeny(pocetKusu);
 });
 

@@ -11,3 +11,33 @@
 #kupci li {
   line-height: 5em;
 }
+
+#nabidka {
+  margin-top: 20px;
+}
+#nabidka h3 {
+  color: #000;
+  margin: 0;
+  padding-bottom: 10px;
+  text-align: left;
+}
+#nabidka a {
+  text-decoration: none;
+}
+#nabidka .image {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+#nabidka .labels {
+  position: absolute;
+  top: 55px;
+}
+#nabidka .labels .label{
+  display: block;
+}
+#nabidka .info {
+  background-color: #E5ECF2;
+  padding: 10px;
+}

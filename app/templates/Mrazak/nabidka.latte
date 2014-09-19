@@ -1,40 +1,33 @@
-
 {block content}
+<h1 n:inner-block="title">
+  Aktuální nabídka
+</h1>
 
-
-  <h1 n:inner-block="title">
-    Aktuální nabídka
-  </h1>
+{snippet mrazak}
   {if $nanuky->count()}
-    {snippet mrazak}
-    <table id="mrazak" class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th class="col-sm-1">Cena</th>
-          <th class="col-sm-1">Skladem</th>
-          <th>Nanuk</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr n:foreach="$nanuky as $nanuk">
-          {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
-          <td>
-            <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="ajax btn btn-primary btn-block" title="{if $jeOblibeny}Koupit můj oblíbený nanuk!{else}Za tohle chci utratit svých {$ceny[$nanuk->id]} Kč!{/if}">
-              <span class="glyphicon glyphicon-shopping-cart"></span> {$ceny[$nanuk->id]}&nbsp;Kč
-            </a>
-          </td>
-          <td>
-            {$nanuk->pocet} ks
-          </td>
-          <td>
-            {$nanuk->nazev}&nbsp;
-            <span n:if="$jeOblibeny" class="label label-danger">oblíbený</span>
-            <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-warning btn-xs pull-right"><span class="glyphicon glyphicon-thumbs-down"></span></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    {/snippet}
+  <div id="nabidka" class="row">
+    <div n:foreach="$nanuky as $nanuk" class="col-xs-12 col-md-3">
+      {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
+      <div class="image">
+        <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="obr" title="Koupit za {$ceny[$nanuk->id]} Kč">
+          <h3>{$nanuk->nazev}</h3>
+          <img height="120px" width="190px" src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
+        </a>
+        <div class="labels">
+          <span n:if="$jeOblibeny" class="label label-success">oblíbený</span>
+        </div>
+      </div>
+      <p class="info">
+        <span class="pull-left">
+          {$ceny[$nanuk->id]} Kč
+          <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+        </span>
+        <span class="pull-right">{$nanuk->pocet} ks</span>
+        <span class="clearfix"></span>
+      </p>
+    </div>
+  </div>
   {else}
     <div class="alert alert-warning">Jdeš pozdě! Mražák je prázdný.</div>
   {/if}
+{/snippet}

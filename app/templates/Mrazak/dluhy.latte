@@ -14,7 +14,7 @@
 </thead>
 <tbody>
   <tr n:foreach="$kupci as $jmeno => $dluh">
-    <td><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax btn btn-primary btn-block">{$dluh} Kč</a></td>
+    <td><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax btn btn-success btn-block">{$dluh} Kč</a></td>
     <td>{$jmeno}</td>
   </tr>
 </tbody>

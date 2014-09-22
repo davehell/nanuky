@@ -15,9 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Nanuky - {block title}{/block}</title>
-
-  <link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap.min.css">
-  <link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap.sandstone.min.css">
   <link rel="stylesheet" media="screen" href="{$basePath}/css/screen.css">
   <link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
   <link rel="shortcut icon" href="{$basePath}/favicon.ico">
@@ -34,7 +32,7 @@
       </div>
 
       <ul n:if="$uziv" class="nav navbar-nav navbar-left">
-        <li n:snippet="dluh"><a href="#" class="alert-{if $dluh < 50}info{elseif $dluh < 100}warning{else}danger{/if}">{$uziv->jmeno} - <span>úvěr: {$dluh}&nbsp;Kč</span></a></li>
+        <li n:snippet="dluh"><a href="#">{$uziv->jmeno} - <span>úvěr: {$dluh}&nbsp;Kč</span></a></li>
         {if $uziv->jmeno == "DHE"}
         <li><a n:href="Mrazak:pridat">Naskladnění</a></li>
         <li><a n:href="Mrazak:dluhy">Dluhy</a></li>

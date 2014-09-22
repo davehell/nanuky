@@ -3,14 +3,15 @@
   Aktuální nabídka
 </h1>
 
+
 {snippet mrazak}
   {if $nanuky->count()}
   <div id="nabidka" class="row">
-    <div n:foreach="$nanuky as $nanuk" class="col-xs-12 col-md-3">
+    <div n:foreach="$nanuky as $nanuk" class="nanuk col-xs-12 col-md-3">
       {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
       <div class="image" data-cena="{$ceny[$nanuk->id]} Kč">
         <h3>{$nanuk->nazev}</h3>
-        <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="btn btn-success btn-lg">Koupit</a>
+        <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="ajax btn btn-success">Koupit</a>
         <img height="120px" width="190px" src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
         <div class="labels">
           <span n:if="$jeOblibeny" class="label label-success">oblíbený</span>
@@ -27,7 +28,7 @@
     </div>
   </div>
   {else}
-    <div class="alert alert-warning">Jdeš pozdě! Mražák je prázdný.</div>
+    <div class="alert alert-danger">Jdeš pozdě! Mražák je prázdný.</div>
   {/if}
 {/snippet}
 

@@ -89,11 +89,11 @@ final class MrazakPresenter extends BasePresenter
       try {
         if($kupec) {
           $this->koupitNanuk($konkretniKus->id, $kupec);
-          $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
+          $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'info');
         }
         else {
           $this->odepsatNanuk($konkretniKus->id);
-          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
+          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'info');
         }
       }
       catch(NanukyException $e) {
@@ -101,7 +101,7 @@ final class MrazakPresenter extends BasePresenter
       }
     }
     else {
-      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'warning');
+      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'danger');
     }
 
     if ($this->isAjax()) {
@@ -122,7 +122,7 @@ final class MrazakPresenter extends BasePresenter
       "dluh" => 0,
       "zaplaceno" => $uziv->zaplaceno + $castka
     ));
-    $this->flashMessage($uziv->jmeno. ' splatil svůj dluh ' . $castka . ' Kč', 'success');
+    $this->flashMessage($uziv->jmeno. ' splatil svůj dluh ' . $castka . ' Kč', 'info');
     if ($this->isAjax()) {
       $this->invalidateControl('dluznici');
       $this->invalidateControl('flash');
@@ -136,7 +136,7 @@ final class MrazakPresenter extends BasePresenter
   {
     try {
       $this->zrusitNakup($id);
-      $this->flashMessage('Nákup byl zrušen.', 'success');
+      $this->flashMessage('Nákup byl zrušen.', 'info');
     }
     catch(NanukyException $e) {
       $this->flashMessage($e->getMessage(), 'danger');
@@ -185,7 +185,7 @@ final class MrazakPresenter extends BasePresenter
   {
     $this->naskladnit($form->getValues());
 
-    $this->flashMessage('Přidáno', 'success');
+    $this->flashMessage('Přidáno', 'info');
     $this->redirect('pridat');
   }
 

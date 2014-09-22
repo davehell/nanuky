@@ -1,6 +1,6 @@
 {block content}
 
-<div class="alert alert-danger">A ty jsi kdo?</div>
+<h1>Kdo jsi?</h1>
 
 <div class="visible-xs-block visible-sm-block">
   <table class="table table-striped table-hover" >
@@ -14,6 +14,6 @@
 
 <div class="hidden-xs hidden-sm">
   <ul id="kupci" class="list-inline hidden-xs" n:inner-foreach="$seznamKupcu as $id => $jmeno">
-    <li class="col-sm-2"><a class="btn btn-default btn-lg" n:href="Mrazak:nabidka $jmeno">{$jmeno}</a></li>
+    <li class="col-sm-2"><a class="btn btn-success btn-lg" n:href="Mrazak:nabidka $jmeno">{$jmeno}</a></li>
   </ul>
 </div>

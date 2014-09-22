@@ -1,7 +1,4 @@
-$(function(){
-  $.nette.init();
-});
-
+$.nette.init();
 $( "#frm-nanukForm-cena" ).focus();
 
 $( "#frm-nanukForm-cena" ).change(function() {
@@ -27,15 +24,4 @@ $( "#frm-nanukForm-nanuky_id" ).change(function() {
 $( "#frm-nanukForm-pocet" ).change(function() {
   var pocetKusu = $( this ).val();
   nastavCeny(pocetKusu);
-});
-
-/*
- * Vyskoèení popup okna s odkazem na nákup nanuku
- */
-$( "#nabidka .image" ).click(function() {
-  $("#nanuk").text($("h3", this).text());
-  $("#cena").text($(this).data("cena"));
-  $("#myModal .modal-footer a").remove();
-  $("a", this).clone().appendTo("#myModal .modal-footer");
-  $("#myModal").modal();
 });

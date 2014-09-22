@@ -9,14 +9,21 @@
   <div id="nabidka" class="row">
     <div n:foreach="$nanuky as $nanuk" class="nanuk col-xs-12 col-md-3">
       {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
-      <div class="image" data-cena="{$ceny[$nanuk->id]} Kč">
+      <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="image"
+        data-confirm="modal"
+        data-confirm-title="{$uziv->jmeno} kupuje"
+        data-confirm-text="{$nanuk->nazev} za {$ceny[$nanuk->id]} Kč"
+        data-confirm-ok-class="btn-success"
+        data-confirm-cancel-class="btn-danger"
+        data-ajax="on">
+
         <h3>{$nanuk->nazev}</h3>
-        <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="ajax btn btn-success">Koupit</a>
-        <img height="120px" width="190px" src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
+
+        <img src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
         <div class="labels">
           <span n:if="$jeOblibeny" class="label label-success">oblíbený</span>
         </div>
-      </div>
+      </a>
       <p class="info">
         <span class="cena pull-left">{$ceny[$nanuk->id]} Kč</span>
         <span class="pull-right">
@@ -31,22 +38,3 @@
     <div class="alert alert-danger">Jdeš pozdě! Mražák je prázdný.</div>
   {/if}
 {/snippet}
-
-
-<div id="myModal" class="modal">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">{$uziv->jmeno} kupuje nanuk</h4>
-      </div>
-      <div class="modal-body">
-        <p>
-          <span id="nanuk"></span> za <span id="cena"></span>
-        </p>
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->

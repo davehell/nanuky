@@ -23,15 +23,15 @@
   padding-bottom: 10px;
   text-align: left;
 }
-#nabidka .image {
-  cursor: pointer;
+#nabidka a.image {
+  display: block;
   height: 180px;
   overflow: hidden;
   position: relative;
   text-align: center;
 }
-#nabidka .image a {
-  display: none;
+#nabidka a.image:hover {
+  text-decoration: none;
 }
 #nabidka .labels {
   position: absolute;
@@ -42,6 +42,6 @@
   font-weight: normal;
 }
 #nabidka .info {
-  background-color: #C6E09E;
+  background-color: #EEF4F9;
   padding: 10px;
 }

@@ -2,18 +2,8 @@
 
 <h1>Kdo jsi?</h1>
 
-<div class="visible-xs-block visible-sm-block">
-  <table class="table table-striped table-hover" >
-    <tbody style="width: 100%">
-      <tr n:foreach="$seznamKupcu as $id => $jmeno">
-        <td class="col-sm-1"><a class="btn btn-block" n:href="Mrazak:nabidka $jmeno">{$jmeno} </a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="hidden-xs hidden-sm">
-  <ul id="kupci" class="list-inline hidden-xs" n:inner-foreach="$seznamKupcu as $id => $jmeno">
-    <li class="col-sm-2"><a class="btn btn-success btn-lg" n:href="Mrazak:nabidka $jmeno">{$jmeno}</a></li>
-  </ul>
+<div id="kupci" class="row">
+  <div n:foreach="$seznamKupcu as $jmeno => $prijmeni" class="kupec col-xs-6 col-md-2">
+    <a n:href="Mrazak:nabidka $jmeno">{$jmeno} <div>{$prijmeni}</div></a>
+  </div>
 </div>

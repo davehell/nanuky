@@ -73,3 +73,13 @@
 #kupci .kupec a div{
   font-size: 14px;
 }
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #EEF4F9;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  border-color: #E5ECF2;
+}
+.table> tbody > tr:hover > td, .table> tbody > tr:hover > th {
+  background-color: #c4e3f3;
+}

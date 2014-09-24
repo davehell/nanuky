@@ -28,16 +28,17 @@
   <div class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" n:href="Mrazak:">Nanuky</a>
+        <a class="navbar-brand" n:href="Mrazak:">Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a>
       </div>
 
       <ul n:if="$uziv" class="nav navbar-nav navbar-left">
-        <li n:snippet="dluh"><a href="#">{$uziv->jmeno} - <span>úvěr: {$dluh}&nbsp;Kč</span></a></li>
-        {if $uziv->jmeno == "DHE"}
+        <li n:snippet="dluh"><a href="#" class="text-danger">úvěr {$dluh}&nbsp;Kč</a></li>
+      </ul>
+
+      <ul n:if="$uziv && $uziv->jmeno == 'DHE'" class="nav navbar-nav navbar-right">
         <li><a n:href="Mrazak:pridat">Naskladnění</a></li>
         <li><a n:href="Mrazak:dluhy">Dluhy</a></li>
         <li><a n:href="Mrazak:nakupy">Nákupy</a></li>
-        {/if}
       </ul>
     </div>
   </div>

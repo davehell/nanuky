@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="nanuk.svg"
+   inkscape:export-filename="C:\wamp\www\nanuky\www\images\nanuk.png"
+   inkscape:export-xdpi="7.3845615"
+   inkscape:export-ydpi="7.3845615">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-70.714286"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 471.41874,638.22264 c -13.7561,-3.94141 -19.7167,-9.74072 -32.0725,-31.20426 -21.3873,-37.1524 -32.0962,-55.5 -32.3937,-55.5 -0.1743,0 -8.8238,4.8923 -19.221,10.87177 -25.2342,14.51226 -28.3985,15.62823 -44.3128,15.62823 -10.5707,0 -13.5654,-0.36773 -19.4033,-2.38256 -9.6352,-3.32539 -21.0779,-11.34842 -26.60792,-18.65607 -3.29561,-4.35495 -87.76036,-149.15289 -109.4351,-187.6046 -1.1295,-2.00378 -3.24678,-5.69359 -4.70506,-8.19957 l -2.65141,-4.55634 5.15141,-1.07765 c 26.41644,-5.52618 51.24996,-27.41109 61.72996,-54.40044 6.939,-17.87016 7.66553,-40.61345 1.85317,-58.01218 -4.92197,-14.73344 -10.8909,-24.49398 -22.11683,-36.16599 l -4.86221,-5.0554 29.77367,-17.09627 c 35.08812,-20.14788 35.44659,-20.33247 45.77366,-23.5708 38.87236,-12.18947 82.60946,1.51515 107.40456,33.65424 4.4811,5.80823 72.7903,123.10121 79.5671,136.62363 1.516,3.025 3.3383,6.175 4.0496,7 2.1283,2.46862 41.5823,71.00441 44.6648,77.58756 3.3001,7.04796 5.7792,17.73461 5.7792,24.91244 0,13.21612 -5.9915,28.686 -15.0247,38.79321 -6.1188,6.84637 -10.9965,10.22412 -32.7104,22.65166 l -16.2698,9.31173 2.3805,4.1217 c 1.3093,2.26694 9.9399,17.1717 19.1791,33.1217 22.7265,39.2337 22.9701,39.7744 22.9701,51 0,8.02492 -0.3423,9.72368 -3.1596,15.67961 -4.3293,9.15261 -10.0879,15.09701 -18.7928,19.39924 -8.3458,4.1247 -18.7666,5.35198 -26.5377,3.12541 z"
+       id="path2996"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\dhe\Desktop\nanuk.png"
+       inkscape:export-xdpi="7.3845615"
+       inkscape:export-ydpi="7.3845615" />
+  </g>
+</svg>

@@ -3,31 +3,32 @@
 DROP TABLE IF EXISTS "kupci";
 CREATE TABLE "kupci" (
   "jmeno" text NOT NULL,
+  "prijmeni" text NULL,
   "dluh" integer NOT NULL DEFAULT '0',
   "zaplaceno" integer NOT NULL DEFAULT '0',
   PRIMARY KEY ("jmeno")
 );
 
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('DHE',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('JBO',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('TMO',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('JSV',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('AKI',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('ARA',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('JHB',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('JHR',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('JLA',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('KPE',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('LBU',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('MHA',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('MKR',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('MMA',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('MPI',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('MSA',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('PVR',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('RKO',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('VMA',	'0',	'0');
-INSERT INTO "kupci" ("jmeno", "dluh", "zaplaceno") VALUES ('VNE',	'0',	'0');
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('DHE',	'Hellebrand',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('JBO',	'Bocek',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('TMO',	'Mollnhuber',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('JSV',	'Svoboda',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('AKI',	'Kij',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('ARA',	'Radimák',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('JHB',	'Hrbek',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('JHR',	'Harčarik',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('JLA',	'Laga',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('KPE',	'Pešulová',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('LBU',	'Burdová',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('MHA',	'Hahn',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('MKR',	'Krchňák',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('MMA',	'Maléř',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('MPI',	'Pilch',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('MSA',	'Sabela',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('PVR',	'Vrubel',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('RKO',	'Kroča',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('VMA',	'Machálková',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('VNE',	'Nečas',	0,	0);
 
 DROP TABLE IF EXISTS "mrazak";
 CREATE TABLE "mrazak" (
@@ -36,9 +37,9 @@ CREATE TABLE "mrazak" (
   "kupec" text NULL,
   "cena_nakup" real NOT NULL,
   "cena_prodej" integer NOT NULL,
-  "datum" text NULL,
-  FOREIGN KEY ("nanuky_id") REFERENCES "nanuky" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION,
-  FOREIGN KEY ("kupec") REFERENCES "kupci" ("jmeno") ON DELETE NO ACTION ON UPDATE NO ACTION
+  "datum_nakupu" text NULL,
+  FOREIGN KEY ("kupec") REFERENCES "kupci" ("jmeno") ON DELETE NO ACTION ON UPDATE NO ACTION,
+  FOREIGN KEY ("nanuky_id") REFERENCES "nanuky" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
 
@@ -46,21 +47,23 @@ DROP TABLE IF EXISTS "nanuky";
 CREATE TABLE "nanuky" (
   "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
   "nazev" text NOT NULL,
-  "ean" text NOT NULL,
   "baleni" integer NOT NULL DEFAULT '1'
 );
 
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (1,	'Mrož jahoda - bílá čokoláda',	'1',	12);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (2,	'Mrož jahoda - černá čokoláda',	'2',	12);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (3,	'Mrož jahoda - kelímek',	'3',	6);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (4,	'Ruská zmrzlina',	'4',	10);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (5,	'Pegas - vanilka',	'5',	9);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (6,	'Míša',	'6',	16);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (7,	'Mrož - dřeň jahoda',	'7',	12);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (8,	'Mrož - dřeň malina',	'8',	12);
-INSERT INTO "nanuky" ("id", "nazev", "ean", "baleni") VALUES (9,	'Pegas - kokos',	'9',	9);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (1,	'Mrož bílá čokoláda',	12);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (2,	'Mrož tmavá čokoláda',	12);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (3,	'Mrož kelímek',	6);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (4,	'Ruská zmrzlina',	10);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (5,	'Pegas - vanilka',	9);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (6,	'Míša',	16);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (7,	'Mrož dřeň - jahoda',	12);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (8,	'Mrož dřeň - malina',	12);
+INSERT INTO "nanuky" ("id", "nazev", "baleni") VALUES (9,	'Pegas - kokos',	9);
 
 DROP TABLE IF EXISTS "sqlite_sequence";
 CREATE TABLE sqlite_sequence(name,seq);
 
+INSERT INTO "sqlite_sequence" ("name", "seq") VALUES ('mrazak',	'125');
 INSERT INTO "sqlite_sequence" ("name", "seq") VALUES ('nanuky',	'9');
+
+-- 

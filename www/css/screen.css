@@ -7,15 +7,16 @@ a.navbar-brand {
   padding-left: 50px;
 }
 a.navbar-brand span {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .navbar .nav > li > a {
+  color: #c4e3f3;
   line-height: 20px;
   font-size: 16px;
   font-weight: normal;
   text-transform: none;
 }
-.navbar .nav > li > a:hover {
+.navbar .nav > li > a:hover, .navbar-default .navbar-brand:hover {
   color: #29abe0;
 }
 .table > tbody > tr > td {

@@ -20,6 +20,15 @@ class KupecRepository extends Repository
   }
 
   /**
+   * Kupci s dluhem.
+   * @return array
+   */
+  public function seznamDluzniku()
+  {
+    return $this->findAll()->where('jmeno <> "DHE"')->where('dluh > 0')->order('jmeno')->fetchPairs('jmeno', 'dluh');
+  }
+
+  /**
    * @return int
    */
   public function zaokrouhliDluh($castka)

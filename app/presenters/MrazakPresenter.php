@@ -65,11 +65,7 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderDluhy()
   {
-    $kupci = $this->kupec->findAll()->order('jmeno');
-    $this->template->kupci = array();
-    foreach ($kupci as $kupec) {
-      $this->template->kupci[$kupec->jmeno] = $this->kupec->zaokrouhliDluh($kupec->dluh);
-    }
+    $this->template->dluznici = $this->kupec->seznamDluzniku();
   }
 
   public function renderNakupy()

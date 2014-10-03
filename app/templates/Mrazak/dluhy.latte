@@ -5,18 +5,14 @@
 </h1>
 
 {snippet dluznici}
-<table id="dluznici" class="table table-striped table-hover">
-<thead>
-  <tr>
-    <th class="col-sm-1">Dluh</th>
-    <th>Kupec</th>
-  </tr>
-</thead>
-<tbody>
-  <tr n:foreach="$kupci as $jmeno => $dluh">
-    <td><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax btn btn-success btn-block">{$dluh} Kč</a></td>
-    <td>{$jmeno}</td>
-  </tr>
-</tbody>
-</table>
+{if $dluznici}
+<dl class="dl-horizontal">
+  {foreach $dluznici as $jmeno => $dluh}
+  <dt>{$jmeno}</dt>
+  <dd><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax btn btn-success">{$dluh} Kč</a></dd>
+  {/foreach}
+</dl>
+{else}
+  <div class="alert alert-info">Konečně nikdo nic nedluží.</div>
+{/if}
 {/snippet}

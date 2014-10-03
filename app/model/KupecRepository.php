@@ -33,9 +33,6 @@ class KupecRepository extends Repository
    */
   public function zaokrouhliDluh($castka)
   {
-    for($i = 1, $c = ceil($castka/5); $i <= $c; $i++) {
-      $castka = $i * 5;
-    }
     return $castka;
   }
 }

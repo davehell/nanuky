@@ -7,7 +7,7 @@
  *}
 
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="cs">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
@@ -15,8 +15,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Nanuky - {block title}{/block}</title>
-  <link rel="stylesheet" media="screen" href="{$basePath}/css/bootstrap.sandstone.min.css">
-  <link rel="stylesheet" media="screen" href="{$basePath}/css/screen.css">
+  <link rel="stylesheet" href="{$basePath}/css/foundation.min.css">
+  <link rel="stylesheet" href="{$basePath}/css/foundation-icons.css">
+  <link rel="stylesheet" href="{$basePath}/css/screen.css">
   <link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
   <link rel="shortcut icon" href="{$basePath}/favicon.ico">
   {block head}{/block}
@@ -25,27 +26,32 @@
 <body>
   <script> document.documentElement.className+=' js' </script>
 
-  <div class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" n:href="Mrazak:">Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a>
-      </div>
+  <div class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a n:href="Mrazak:">Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
 
-      <ul n:if="$uziv" class="nav navbar-nav navbar-left">
-        <li n:snippet="dluh"><a href="#" class="text-danger">úvěr {$dluh}&nbsp;Kč</a></li>
-      </ul>
-
-      <ul n:if="$uziv && $uziv->jmeno == 'DHE'" class="nav navbar-nav navbar-right">
+    <div class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul n:if="$uziv && $uziv->jmeno == 'DHE'" class="right">
         <li><a n:href="Mrazak:pridat">Naskladnění</a></li>
         <li><a n:href="Mrazak:dluhy">Dluhy</a></li>
         <li><a n:href="Mrazak:nakupy">Nákupy</a></li>
       </ul>
+
+      <!-- Left Nav Section -->
+      <ul n:if="$uziv" class="left">
+        <li n:snippet="dluh" class="active"><a href="#" >úvěr {$dluh}&nbsp;Kč</a></li>
+      </ul>
     </div>
   </div>
 
-  <div class="container">
+  <div class="row">
   {snippet flash}
-  <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
+  <div n:foreach="$flashes as $flash" class="alert-box {$flash->type}">{$flash->message}</div>
   {/snippet}
   {include content}
   </div>
@@ -54,9 +60,12 @@
   <script src="{$basePath}/js/jquery.js"></script>
   <script src="{$basePath}/js/nette.ajax.js"></script>
   <script src="{$basePath}/js/confirm.dialog.js"></script>
-  <script src="{$basePath}/js/bootstrap.min.js"></script>
+  <script src="{$basePath}/js/foundation.min.js"></script>
   <script src="{$basePath}/js/netteForms.js"></script>
   <script src="{$basePath}/js/main.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
   {/block}
 </body>
 </html>

@@ -1,35 +1,16 @@
-body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-.navbar {
-  border-radius: 0;
-  margin-bottom: 10px;
-}
-a.navbar-brand {
+.top-bar .title-area .name h1 a  {
   background: url('../images/nanuk.png') 5px 10px no-repeat;
-  padding-left: 50px;
+  padding-left: 40px;
 }
-a.navbar-brand span {
+.top-bar .title-area .name h1 a span {
   margin-left: 20px;
 }
-.navbar .nav > li > a {
-  color: #c4e3f3;
-  line-height: 20px;
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: none;
+.alert-box {
+  margin-top: 20px;
 }
-.navbar .nav > li > a:hover, .navbar-default .navbar-brand:hover {
-  color: #29abe0;
-}
+
 .table > tbody > tr > td {
   vertical-align: middle;
-}
-.alert {
-  border-radius: 0;
-}
-#kupci li {
-  line-height: 5em;
 }
 #nabidka {
   margin-top: 20px;
@@ -42,6 +23,7 @@ a.navbar-brand span {
   margin: 0;
   padding-bottom: 10px;
   text-align: left;
+  white-space: nowrap;
 }
 #nabidka a.image {
   display: block;
@@ -93,12 +75,13 @@ a.navbar-brand span {
   font-size: 14px;
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-  background-color: #EEF4F9;
+#nakupy {
+  width: 100%;
 }
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-  border-color: #E5ECF2;
+#nakupy td a.button {
+  margin: 0;
 }
+
 .table> tbody > tr:hover > td, .table> tbody > tr:hover > th {
   background-color: #c4e3f3;
 }

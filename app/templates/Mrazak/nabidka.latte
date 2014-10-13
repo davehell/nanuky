@@ -7,7 +7,7 @@
 {snippet mrazak}
   {if $nanuky->count()}
   <div id="nabidka" class="row">
-    <div n:foreach="$nanuky as $nanuk" class="nanuk col-xs-12 col-md-3">
+    <div n:foreach="$nanuky as $nanuk" class="nanuk columns small-12 large-3 {last}end{/last}">
       {? $jeOblibeny = in_array($nanuk->id, $oblibene);}
       <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="image"
         data-confirm="modal"
@@ -21,16 +21,15 @@
 
         <img src="{$basePath}/images/nanuky/{$nanuk->id}.jpg">
         <div class="labels">
-          <span n:if="$jeOblibeny" class="label label-success">oblíbený</span>
+          <span n:if="$jeOblibeny" class="label success">oblíbený</span>
         </div>
       </a>
-      <p class="info">
-        <span class="cena pull-left">{$ceny[$nanuk->id]} Kč</span>
-        <span class="pull-right">
+      <p class="info clearfix">
+        <span class="cena left">{$ceny[$nanuk->id]} Kč</span>
+        <span class="right">
           <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span></a>
           {$nanuk->pocet} ks
         </span>
-        <span class="clearfix"></span>
       </p>
     </div>
   </div>

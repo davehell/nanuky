@@ -5,7 +5,7 @@
 </h1>
 
 {snippet nakupy}
-<table class="table table-striped table-hover">
+<table id="nakupy">
 <thead>
   <tr>
     <th>Datum</th>
@@ -21,7 +21,7 @@
     <td>{$nakup->nanuky->nazev} </td>
     <td>
       {$nakup->cena_prodej}&nbsp;Kč
-      <a title="Zrušit nákup od {$nakup->kupec}" n:href="storno!, $nakup->id" class="ajax btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+      <a title="Zrušit nákup od {$nakup->kupec}" n:href="storno!, $nakup->id" class="ajax button tiny"><span class="fi-x"></span></a>
     </td>
   </tr>
 </tbody>

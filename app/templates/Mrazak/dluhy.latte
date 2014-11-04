@@ -6,13 +6,22 @@
 
 {snippet dluznici}
 {if $dluznici}
-<dl class="dl-horizontal">
-  {foreach $dluznici as $jmeno => $dluh}
-  <dt>{$jmeno}</dt>
-  <dd><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax btn btn-success">{$dluh} Kč</a></dd>
-  {/foreach}
-</dl>
+<table>
+<thead>
+  <tr>
+    <th>Kupec</th>
+    <th>Dluh</th>
+  </tr>
+</thead>
+<tbody>
+  <tr n:foreach="$dluznici as $jmeno => $dluh">
+    <td>{$jmeno} </td>
+    <td><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax button tiny">{$dluh} Kč</a> </td>
+  </tr>
+</tbody>
+</table>
+
 {else}
-  <div class="alert alert-info">Konečně nikdo nic nedluží.</div>
+  <div class="alert-box info">Konečně nikdo nic nedluží.</div>
 {/if}
 {/snippet}

@@ -85,19 +85,19 @@ final class MrazakPresenter extends BasePresenter
       try {
         if($kupec) {
           $this->koupitNanuk($konkretniKus->id, $kupec);
-          $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'info');
+          $this->flashMessage('Zakoupen nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
         }
         else {
           $this->odepsatNanuk($konkretniKus->id);
-          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'info');
+          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', '');
         }
       }
       catch(NanukyException $e) {
-        $this->flashMessage($e->getMessage(), 'danger');
+        $this->flashMessage($e->getMessage(), 'alert');
       }
     }
     else {
-      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'danger');
+      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'alert');
     }
 
     if ($this->isAjax()) {
@@ -118,7 +118,7 @@ final class MrazakPresenter extends BasePresenter
       "dluh" => 0,
       "zaplaceno" => $uziv->zaplaceno + $castka
     ));
-    $this->flashMessage($uziv->jmeno. ' splatil svůj dluh ' . $castka . ' Kč', 'info');
+    $this->flashMessage($uziv->jmeno. ' splatil svůj dluh ' . $castka . ' Kč', '');
     if ($this->isAjax()) {
       $this->invalidateControl('dluznici');
       $this->invalidateControl('flash');
@@ -132,10 +132,10 @@ final class MrazakPresenter extends BasePresenter
   {
     try {
       $this->zrusitNakup($id);
-      $this->flashMessage('Nákup byl zrušen.', 'info');
+      $this->flashMessage('Nákup byl zrušen.', '');
     }
     catch(NanukyException $e) {
-      $this->flashMessage($e->getMessage(), 'danger');
+      $this->flashMessage($e->getMessage(), 'alert');
     }
 
     if ($this->isAjax()) {
@@ -181,7 +181,7 @@ final class MrazakPresenter extends BasePresenter
   {
     $this->naskladnit($form->getValues());
 
-    $this->flashMessage('Přidáno', 'info');
+    $this->flashMessage('Přidáno', '');
     $this->redirect('pridat');
   }
 

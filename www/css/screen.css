@@ -78,8 +78,8 @@
 #nakupy {
   width: 100%;
 }
-#nakupy td a.button {
-  margin: 0;
+#nakupy td a, #nabidka .nanuk .info a {
+  color: #f08a24;
 }
 
 .table> tbody > tr:hover > td, .table> tbody > tr:hover > th {

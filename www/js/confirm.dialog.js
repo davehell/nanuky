@@ -15,21 +15,14 @@
                 var obj = this;
                 event.preventDefault();
                 event.stopImmediatePropagation();
-                $("<div id='dConfirm' class='modal'></div>").appendTo('body');
-                $('#dConfirm').html("<div class='modal-dialog modal-sm'><div class='modal-content'><div id='dConfirmHeader' class='modal-header'></div><div id='dConfirmBody' class='modal-body'></div><div id='dConfirmFooter' class='modal-footer'></div></div></div>");
-                $('#dConfirmHeader').html("<button type='button' class='close' data-dismiss='modal'>&times;</button><h4 id='dConfirmTitle'></h4>");
-                $('#dConfirmTitle').html($(obj).data('confirm-title'));
-                $('#dConfirmBody').html($(obj).data('confirm-text'));
-                $('#dConfirmFooter').html("<a id='dConfirmCancel' class='btn " + $(obj).data('confirm-cancel-class') + "' data-dismiss='modal'>Ne</a><a id='dConfirmOk' class='btn " + $(obj).data('confirm-ok-class') + "' data-dismiss='modal'>Ano</a>");
-                if ($(obj).data('confirm-header-class')) {
-                    $('#dConfirmHeader').addClass($(obj).data('confirm-header-class'));
-                }
-                if ($(obj).data('confirm-ok-text')) {
-                    $('#dConfirmOk').html($(obj).data('confirm-ok-text'));
-                }
-                if ($(obj).data('confirm-cancel-text')) {
-                    $('#dConfirmCancel').html($(obj).data('confirm-cancel-text'));
-                }
+                $('<div id="dConfirm" class="reveal-modal tiny" data-reveal></div>').appendTo('body');
+                $('#dConfirm').html(
+                  '<h3>' + $(obj).data('confirm-title') + '</h3>' +
+                  '<p>' + $(obj).data('confirm-text') + '</p>' +
+                  '<a id="dConfirmCancel" class="button secondary">Ne</a>&nbsp;' +
+                  '<a id="dConfirmOk" class="button success">Ano</a>' +
+                  '<a class="close-reveal-modal">&#215;</a>'
+                );
                 $('#dConfirmOk').on('click', function () {
                     var tagName = $(obj).prop("tagName");
                     if (tagName == 'INPUT') {
@@ -44,11 +37,15 @@
                             document.location = obj.href;
                         }
                     }
+                    $('#dConfirm').foundation('reveal', 'close');
                 });
-                $('#dConfirm').on('hidden', function () {
-                    $('#dConfirm').remove();
+                $('#dConfirmCancel').on('click', function () {
+                  $('#dConfirm').foundation('reveal', 'close');
                 });
-                $('#dConfirm').modal('show');
+                $('#dConfirm').foundation('reveal', 'open');
+                $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+                  $('#dConfirm').remove();
+                });
                 return false;
             });
         }

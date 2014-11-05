@@ -25,13 +25,13 @@
       <p class="info clearfix">
         <span class="cena left">{$ceny[$nanuk->id]} Kč</span>
         <span class="right">
-          <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+          <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax"><span class="fi-dislike"></span></a>
           {$nanuk->pocet} ks
         </span>
       </p>
     </div>
   </div>
   {else}
-    <div class="alert alert-danger">Jdeš pozdě! Mražák je prázdný.</div>
+    <div class="alert-box alert">Jdeš pozdě! Mražák je prázdný.</div>
   {/if}
 {/snippet}

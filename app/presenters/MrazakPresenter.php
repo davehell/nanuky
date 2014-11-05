@@ -110,15 +110,14 @@ final class MrazakPresenter extends BasePresenter
   /**
    * @param string kupec
    */
-  public function handleDluh($kupec)
+  public function handleDluh($jmeno, $castka)
   {
-    $uziv = $this->kupec->get($kupec);
-    $castka = $this->kupec->zaokrouhliDluh($uziv->dluh);
-    $uziv->update(array(
-      "dluh" => 0,
-      "zaplaceno" => $uziv->zaplaceno + $castka
-    ));
-    $this->flashMessage($uziv->jmeno. ' splatil svůj dluh ' . $castka . ' Kč', '');
+    $kupec = $this->kupec->get($jmeno);
+    if(!$kupec) throw new NanukyException('Zákazník se jménem "' . $jmeno . '" neexistuje.');
+
+    $zaplaceno = $this->kupec->splatkaDluhu($kupec, $castka);
+    $this->flashMessage($kupec->jmeno. ' splatil dluh ' . $zaplaceno . ' Kč', '');
+
     if ($this->isAjax()) {
       $this->invalidateControl('dluznici');
       $this->invalidateControl('flash');

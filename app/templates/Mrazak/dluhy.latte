@@ -6,21 +6,17 @@
 
 {snippet dluznici}
 {if $dluznici}
-<table>
-<thead>
-  <tr>
-    <th>Kupec</th>
-    <th>Dluh</th>
-  </tr>
-</thead>
-<tbody>
-  <tr n:foreach="$dluznici as $jmeno => $dluh">
-    <td>{$jmeno} </td>
-    <td><a n:if="$dluh" title="Smáznout dluh od {$jmeno}" n:href="dluh!, $jmeno" class="ajax button tiny">{$dluh} Kč</a> </td>
-  </tr>
-</tbody>
-</table>
-
+  <div class="row collapse" n:foreach="$dluznici as $jmeno => $dluh">
+    <div class="small-1 columns">
+      <label for="dluh-{$jmeno}" class="inline">{$jmeno} </label>
+    </div>
+    <div class="small-1 columns">
+      <input id="dluh-{$jmeno}" name="dluh" type="text" value="{$dluh}">
+    </div>
+    <div class="small-1 columns end">
+      <button title="Smáznout dluh od {$jmeno}" data-jmeno="{$jmeno}" data-url="{link dluh!, $jmeno}" class="dluh button postfix">Zaplatit</button>
+    </div>
+  </div>
 {else}
   <div class="alert-box success">Konečně nikdo nic nedluží.</div>
 {/if}

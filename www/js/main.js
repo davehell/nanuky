@@ -1,4 +1,5 @@
 $.nette.init();
+
 $( "#frm-nanukForm-cena" ).focus();
 
 $( "#frm-nanukForm-cena" ).change(function() {
@@ -25,3 +26,14 @@ $( "#frm-nanukForm-pocet" ).change(function() {
   var pocetKusu = $( this ).val();
   nastavCeny(pocetKusu);
 });
+
+$('button.dluh').click(function (event) {
+  var url = $(this).data('url');
+  var jmeno = $(this).data('jmeno');
+  var castka = $( "input#dluh-" + jmeno ).val();
+
+  if(!castka) return;
+  $.nette.ajax({url: url, data: {"castka": castka}}, event).done(function() {
+  });
+});
+

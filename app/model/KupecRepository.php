@@ -35,4 +35,16 @@ class KupecRepository extends Repository
   {
     return $castka;
   }
+
+  public function splatkaDluhu($kupec, $castka)
+  {
+    $castka = max(0, intval($castka));
+    if($castka > 0) {
+      $kupec->update(array(
+        "dluh" => $kupec->dluh - $castka,
+        "zaplaceno" => $kupec->zaplaceno + $castka
+      ));
+    }
+    return $castka;
+  }
 }

@@ -1,0 +1,1630 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"prin",
+				"print_r〔function〕"
+			],
+			[
+				"partne",
+				"partners"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"ba",
+				"barDump"
+			],
+			[
+				"arra",
+				"array〔keyword〕"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"cl",
+				"class=〔attribute〕"
+			],
+			[
+				"ver",
+				"verze"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"sez",
+				"$seznam〔variable〕"
+			],
+			[
+				"a",
+				"array"
+			],
+			[
+				"verz",
+				"$verzeId〔variable〕"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"uz",
+				"$uziv〔variable〕"
+			],
+			[
+				"v",
+				"verzeId〔variable〕"
+			],
+			[
+				"be",
+				"beforeRender"
+			],
+			[
+				"apli",
+				"aplikaci"
+			],
+			[
+				"serv",
+				"serveru"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"neote",
+				"neotestovane  (function)"
+			],
+			[
+				"neotes",
+				"pocetNeotestovanych  (function)"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"get",
+				"getBy  (function)"
+			],
+			[
+				"verze",
+				"verze_id"
+			],
+			[
+				"tester",
+				"tester_id"
+			],
+			[
+				"border-le",
+				"border-left-width"
+			],
+			[
+				"pozn",
+				"poznamky"
+			],
+			[
+				"mae",
+				"margin-left"
+			],
+			[
+				"lcPo",
+				"lcPodniky"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"spe",
+				"specVzorce"
+			],
+			[
+				"en",
+				"envzorce"
+			],
+			[
+				"def",
+				"defv	define variable"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"gc",
+				"gcMenu"
+			],
+			[
+				"g",
+				"getPrikaz"
+			],
+			[
+				"inpu",
+				"InputData"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"define",
+				"DEFINE"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "energis",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "Snippet: cl",
+		"selected_items":
+		[
+			[
+				"Snippet: cl",
+				"Snippet: console.log"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"Snippet: lc",
+				"Snippet: logical"
+			],
+			[
+				"Snippet: subs",
+				"Snippet: substring"
+			],
+			[
+				"Snippet: hr",
+				"Snippet: <?php foreach (…) … <?php endforeach ?>"
+			],
+			[
+				"Snippet: p",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Snippet: dl",
+				"Snippet: <?php if (…) ?> … <?php else ?> … <?php endif ?>"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: dop",
+				"Snippet: DoplnList"
+			],
+			[
+				"Snippet: ipu",
+				"Snippet: iput.i"
+			],
+			[
+				"Snippet: vyma",
+				"Snippet: VymazList"
+			],
+			[
+				"Snippet: ise",
+				"Snippet: IsEmptyChar"
+			],
+			[
+				"Snippet: c",
+				"Snippet: console.info"
+			],
+			[
+				"Snippet: dv",
+				"Snippet: define variable"
+			],
+			[
+				"Snippet: repla",
+				"Snippet: replace"
+			],
+			[
+				"Snippet: dopl",
+				"Snippet: DoplnList"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Snippet: ul",
+				"Snippet: lookup"
+			],
+			[
+				"Snippet: if",
+				"Snippet: if then else"
+			],
+			[
+				"Snippet: ifh",
+				"Snippet: if then else"
+			],
+			[
+				"Snippet: pro",
+				"Snippet: procedure"
+			],
+			[
+				"Snippet: com",
+				"Snippet: comment"
+			],
+			[
+				"Snippet: out",
+				"Snippet: out"
+			],
+			[
+				"Snippet: coni",
+				"Snippet: console.info"
+			],
+			[
+				"Snippet: proc",
+				"Snippet: procedure"
+			],
+			[
+				"Snippet: strin",
+				"Snippet: string"
+			],
+			[
+				"Snippet: rep",
+				"Snippet: repeat"
+			],
+			[
+				"Snippet: proce",
+				"Snippet: procedure"
+			],
+			[
+				"Snippet: def",
+				"Snippet: define parameter"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: con",
+				"Snippet: console.log(...);"
+			],
+			[
+				"filedi",
+				"FileDiffs: Menu"
+			],
+			[
+				"Snippet: cm",
+				"Snippet: comment"
+			],
+			[
+				"Snippet: rep	",
+				"Snippet: repeat"
+			],
+			[
+				"Snippet: num",
+				"Snippet: num-entries"
+			],
+			[
+				"Snippet: repe",
+				"Snippet: repeat"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ifth",
+				"Snippet: if then else"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"Snippet:  ",
+				"Snippet: out"
+			],
+			[
+				"Snippet: defv",
+				"Snippet: define variable"
+			],
+			[
+				"Snippet: whi",
+				"Snippet: while"
+			],
+			[
+				"Snippet: ied",
+				"Snippet: IsEmptyDec"
+			],
+			[
+				"Snippet: std",
+				"Snippet: StringToDec"
+			],
+			[
+				"Snippet: str",
+				"Snippet: string"
+			],
+			[
+				"Snippet: ret",
+				"Snippet: return"
+			],
+			[
+				"Snippet: repl	",
+				"Snippet: replace"
+			],
+			[
+				"Snippet: len",
+				"Snippet: length"
+			],
+			[
+				"Snippet: isemd",
+				"Snippet: IsEmptyDec"
+			],
+			[
+				"Snippet: isemp",
+				"Snippet: IsEmptyInt"
+			],
+			[
+				"ori",
+				"Origami: Zoom Current Pane"
+			],
+			[
+				"Snippet: as",
+				"Snippet: assign"
+			],
+			[
+				"snip",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"Snippet: de",
+				"Snippet: DecToString"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"diso",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pvr",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"package re",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"open",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"log",
+				"Git: Log Current File"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"gitst",
+				"Git: Show Tags"
+			],
+			[
+				"git st",
+				"Git: Show Tags"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"git lo",
+				"Git: Log Current File"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"proj",
+				"Project: Add Folder"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"u = str(uuid.uuid4())",
+			"uuid.uuid4()",
+			"sublime.log_commands(True);",
+			"uuid.uuid4()",
+			"uuid.uuid4() ",
+			"window.run_command(\"show_overlay\", {\"overlay\": \"goto\", \"text\": \"aaa\", \"show_files\": \"true\"})",
+			"self.window.run_command(\"show_overlay\", {\"overlay\": \"goto\", \"text\": \"aaa\", \"show_files\": \"true\"})",
+			"view.indexed_symbols()",
+			"sublime.cache_path()",
+			"view.run_command('revert')",
+			"view.run_command(\"goto_line\", {\"line\": 10})",
+			"goto_line",
+			"git",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"dir",
+			"echo",
+			"pwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/wamp/www/nanuky/nanuky.sublime-project",
+		"/C/wamp/www/ztp/app/templates/@layout.latte",
+		"/C/wamp/www/ztp/www/css/print.css",
+		"/C/wamp/www/ztp/www/css/export.css",
+		"/C/wamp/www/ztp/app/templates/@export.latte",
+		"/C/wamp/www/ztp/www/css/screen.css",
+		"/C/wamp/www/ztp-ostra/app/bootstrap.php",
+		"/C/wamp/www/ztp/app/bootstrap.php",
+		"/C/wamp/www/ztp/www/.htaccess",
+		"/C/wamp/www/ztp-ostra/www/.htaccess",
+		"/C/wamp/www/ztp-ostra/app/.htaccess",
+		"/C/wamp/www/ztp-ostra/temp/cache/latte/wamp-www-ztp-ostra-app-templates-Verze-zmeny-latte-Template74ee82f55235bb324f28d855eeb389c7.php",
+		"/C/wamp/www/ztp/app/templates/Verze/zmeny.latte",
+		"/C/wamp/www/ztp/vendor/nette/application/src/Application/Application.php",
+		"/C/wamp/www/ztp/app/model/Repository.php",
+		"/C/wamp/www/ztp/app/presenters/VerzePresenter.php",
+		"/C/wamp/www/ztp/app/presenters/ZmenyPresenter.php",
+		"/C/wamp/www/ztp/app/templates/Zmeny/zmena.latte",
+		"/C/wamp/www/ztp-ostra/temp/cache/_Nette.Templating.Cache/_c7dc7b89bb34a35b2948d4a22abcb16d",
+		"/C/wamp/www/ztp-ostra/temp/cache/latte/wamp-www-ztp-ostra-app-templates-Zmeny-zmena-latte-Templatec7d6f02701c25a0bbe13227011a0a35c.php",
+		"/G/repos/dhe/dist/AppSW/WebServer/webenergis/javascript/akcep.js",
+		"/C/wamp/www/ztp-ostra/temp/cache/latte/wamp-www-ztp-ostra-app-templates-Zmeny-zmena-latte-Templatec7d6f02701c25a0bbe13227011a0a35c.php.lock",
+		"/C/wamp/www/ztp-ostra/www/css/bootstrap.min.css",
+		"/G/repos/dhe/energis/src/eneweb/wuzel.p",
+		"/C/wamp/www/ztp/vendor/jkuchar/pdfresponse/PDFResponse.php",
+		"/C/wamp/www/ztp/vendor/jkuchar/pdfresponse/mPDFExtended.php",
+		"/C/Users/dhe/Downloads/OpenVPNPortable/current.txt",
+		"/C/wamp/www/ztp/vendor/jkuchar/pdfresponse/README.md",
+		"/C/wamp/www/ztp/vendor/jkuchar/pdfresponse/netterobots.txt",
+		"/C/wamp/www/ztp/app/model/ZmenyRepository.php",
+		"/C/wamp/www/ztp/app/components/Texy/Texy.php",
+		"/C/wamp/www/ztp/app/presenters/BasePresenter.php",
+		"/C/wamp/www/ztp/app/ztp.sql",
+		"/C/Users/dhe/AppData/Local/Temp/verze.sql.txt",
+		"/C/wamp/www/ztp/app/templates/Error/404.latte",
+		"/C/wamp/www/ztp/www/js/main.js",
+		"/C/wamp/www/ztp/app/templates/Verze/export.latte",
+		"/C/wamp/www/ztp/app/model/VerzeRepository.php",
+		"/C/wamp/www/ztp/app/model/LideRepository.php",
+		"/C/wamp/www/ztp/app/templates/Verze/osoba.latte",
+		"/C/wamp/www/ztp/app/model/ChybyRepository.php",
+		"/C/wamp/www/ztp/app/config/config.local.neon",
+		"/C/wamp/www/ztp/app/templates/Verze/info.latte",
+		"/C/wamp/www/ztp/app/templates/Chyby/chyba.latte",
+		"/D/Sublime Text/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Sublime Text/Data/Packages/User/Preferences.sublime-settings",
+		"/G/repos/dhe/energis/src/eneweb/diag_max.p",
+		"/C/wamp/www/ztp/ztp.sublime-project",
+		"/C/wamp/www/ztp/composer.json",
+		"/C/wamp/www/ztp/app/config/config.neon",
+		"/C/wamp/www/gitlist/config.ini",
+		"/C/wamp/www/gitlist/vendor/klaussilveira/gitter/lib/Gitter/Client.php",
+		"/G/repos/dhe/energis/src/eneweb/webreader.p",
+		"/C/wamp/www/ztp/www/ulohy.json",
+		"/C/wamp/www/ztp/www/js/netteForms.js",
+		"/C/wamp/www/wordpress_na/wp-config..old",
+		"/C/wamp/www/wordpress_na/wp-content/themes/instar/header.php",
+		"/C/Users/dhe/Downloads/wordpress_na.sql",
+		"/C/wamp/www/wordpress/wp-config.php",
+		"/C/wamp/www/wordpress/wp-content/themes/instar/header.php",
+		"/C/wamp/www/wordpress/wp-content/themes/instar/searchform.php",
+		"/C/Users/dhe/Desktop/wordpress-2015-03-26.sql",
+		"/C/wamp/www/wordpress/wp-pass.php",
+		"/C/wamp/www/wordpress/wp-register.php",
+		"/C/Users/dhe/Desktop/solarized_dark.reg",
+		"/G/repos/dhe/energis/src/eneweb/wakcep.p",
+		"/G/repos/dhe/energis/src/eneweb/ulohy.p",
+		"/C/Users/dhe/Desktop/eneprvky.txt",
+		"/G/repos/dhe/sw3firem/common/mobile-myenergis/readme.txt",
+		"/G/repos/dhe/sw3firem/common/mobile-myenergis/src/js/nastav.js",
+		"/C/Users/dhe/Downloads/pure-flat-2013-toolbar-trial/ReadMe.txt",
+		"/G/repos/dhe/energis/src/eneweb/wstrukt.p",
+		"/G/repos/dhe/sw3firem/common/mobile-myenergis/src/index.html",
+		"/G/repos/dhe/sw3firem/common/mobile-myenergis/src/index-dev.html",
+		"/G/repos/dhe/energis/src/eneapi/f-fcedb.p",
+		"/G/repos/dhe/sw3firem/common/mobile-myenergis/src/js/myenergis/LogonView.js",
+		"/G/repos/dhe/webenergis/jsmonit/ene/monit/component/analog.js",
+		"/C/Users/dhe/Desktop/eneprvky",
+		"/G/repos/dhe/webenergis/jsmonit/ene/monit/display.js",
+		"/G/repos/dhe/energis/src/eneapi/f-strom.p",
+		"/G/repos/dhe/energis/src/eneweb/xstrom.p",
+		"/G/repos/dhe/webenergis/jsmonit/ene/type/dateTime.js",
+		"/C/wamp/www/midiweb/aplikace/hudba/app/templates/@midi.latte",
+		"/C/wamp/www/midiweb/subdomeny/www/js/vyhledavani.js",
+		"/C/wamp/www/ztp/www/js/typeahead.jquery.js",
+		"/C/wamp/www/midiweb/aplikace/hudba/app/templates/Skladba/default.latte",
+		"/C/wamp/www/midiweb/aplikace/hudba/app/templates/@layout.latte",
+		"/C/wamp/www/Texyla-Nette-2.1/app/presenters/TexylaPresenter.php",
+		"/C/wamp/www/midiweb/subdomeny/www/js/typeahead.js",
+		"/C/wamp/www/ztp/www/js/typeahead.bundle.min.js",
+		"/C/Users/dhe/Downloads/typeahead.bundle.js",
+		"/C/wamp/www/ztp/app/components/Texy/TexyParser.php",
+		"/C/wamp/www/ztp/app/components/StavControl.latte",
+		"/C/wamp/www/ztp/app/components/Texy/TexyObject.php",
+		"/C/wamp/www/ztp/app/components/Texy/modules/TexyHtmlOutputModule.php",
+		"/C/wamp/www/ztp/app/components/ChybyControl.latte",
+		"/C/wamp/www/ztp/app/presenters/TexylaPresenter.php",
+		"/C/wamp/www/ztp/app/components/TesteriControl.latte",
+		"/C/wamp/www/Texyla-Nette-2.1/app/classes/TexylaLoader.php",
+		"/C/wamp/www/Texyla-Nette-2.1/app/presenters/BasePresenter.php",
+		"/C/wamp/www/Texyla-Nette-2.1/app/templates/Homepage/default.latte",
+		"/C/wamp/www/Texyla-Nette-2.1/app/presenters/HomepagePresenter.php",
+		"/C/wamp/www/Texyla-Nette-2.1/app/config/config.neon",
+		"/C/wamp/www/Texyla-Nette-2.1/app/classes/MyTexy.php",
+		"/C/wamp/www/ztp/app/templates/Zmeny/hledat.latte",
+		"/C/wamp/www/ztp/www/fonts/lmroman9-regular.otf",
+		"/C/wamp/www/ztp/app/presenters/ChybyPresenter.php",
+		"/C/wamp/www/ztp/www/js/modal.js",
+		"/C/wamp/www/ztp/app/templates/@modal.latte",
+		"/C/wamp/www/ztp/app/components/Texy/modules/TexyFigureModule.php",
+		"/C/wamp/www/ztp/app/components/TesteriControl.php",
+		"/C/wamp/www/ztp/app/exceptions.php",
+		"/C/wamp/www/ztp/www/fonts/lmroman9-regular-webfont.svg",
+		"/C/wamp/www/ztp/app/components/Texy/TexyUtf.php",
+		"/G/repos/dhe/sw3firem/instar/struktura-db/dbstrukt2.p",
+		"/G/repos/dhe/energis/src/i/iput.i",
+		"/G/repos/dhe/sw3firem/instar/struktura-db/dbstrukt.p",
+		"/G/repos/dhe/energis/src/i/i-prstat.i",
+		"/G/repos/dhe/energis/src/i/INFO.i",
+		"/C/wamp/www/ztp/app/components/Texy/modules/TexyBlockModule.php",
+		"/C/wamp/www/ztp/app/templates/Verze/default.latte",
+		"/C/wamp/www/ztp/www/js/nette.ajax.js",
+		"/G/repos/dhe/energis/src/i/iwdef.i",
+		"/G/repos/dhe/energis/src/i/i-fce.i",
+		"/G/repos/dhe/energis/src/i/ifceweb.i",
+		"//Silver/wrk9/dhe/compile/compile.bat",
+		"/C/wamp/www/ztp/backup.bat",
+		"/G/repos/dhe/energis/src/i/idefvar.i"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\wamp\\www\\ztp\\app",
+			"<project>",
+			"C:\\wamp\\www\\ztp\\app\\components",
+			"<project>,C:\\wamp\\www\\ztp\\app\\components",
+			"<project>",
+			"C:\\wamp\\www\\ztp\\app\\templates",
+			"<project>",
+			"G:\\repos\\dhe\\energis\\src\\eneweb",
+			"G:\\repos\\dhe\\energis\\src\\eneapi",
+			"G:\\repos\\dhe\\webenergis\\jsmonit",
+			"G:\\repos\\dhe\\webenergis\\templates\\default\\javascript",
+			"G:\\repos\\dhe\\energis\\src\\eneweb",
+			"<open files>,G:\\repos\\dhe\\energis\\src\\",
+			"<open files>,G:\\repos\\dhe\\energis\\src\\eneapi",
+			"<open files>,G:\\repos\\dhe\\energis\\src\\eneweb",
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ztp",
+			"break",
+			"TRUE",
+			"RewriteRule",
+			"current",
+			"this",
+			"mpdf",
+			"pdfa",
+			"mpdf",
+			"documentAuthor",
+			"VERSION",
+			"ulozeniZmen",
+			"tag",
+			"ZtpException",
+			"ZTPException",
+			"$tag",
+			"'tag'",
+			"throw",
+			"zmeny_id",
+			"table",
+			"$tag->id",
+			"$tag",
+			"tag",
+			"info",
+			"li",
+			"verze",
+			"uziv",
+			"fff",
+			"ul",
+			"skrytei",
+			"vyberProtokolu",
+			"vyberpro",
+			"filtrZmen",
+			"vyberProtokolu",
+			"\" ",
+			"skry",
+			"verzeId",
+			"filtr",
+			"pohled",
+			"pocetVsechZmen",
+			"aktua",
+			"vyberProtokolu",
+			"pocetZmenVeVerzi",
+			"vsechnyVerze",
+			"vsechny",
+			";\n",
+			"zamceni",
+			"verzeId",
+			"redirec",
+			"zamceni",
+			"ulohy.json",
+			"poradi",
+			"update",
+			"zamek",
+			"aktualizovatPoradiZmen",
+			"zmeny",
+			"zamceniVerze",
+			"hide",
+			"zamceniVerze",
+			"addClass",
+			"zamcenaVerze",
+			"e",
+			"title",
+			"verzeid",
+			"verze",
+			"\"",
+			"after",
+			"osoba",
+			"$osoba",
+			"osobafo",
+			"hidde",
+			"je_",
+			"hidde",
+			"je_",
+			"prostredi",
+			"uziv",
+			"clovek",
+			"$clovek",
+			"clovek",
+			"verze",
+			"odebratProstredi",
+			"seznamLidi",
+			"jmeno",
+			"id",
+			"fetchPairs",
+			"zmeny",
+			"neopraveneChyby",
+			"opraveno",
+			"vsechnyChybyOpraveny",
+			"nastavOkVsem",
+			"změny",
+			"zmena",
+			"změny",
+			"zmena",
+			"click",
+			"submit",
+			"btn btn-primary",
+			"<span class=\"glyphicon glyphicon-ok\"></span>",
+			"Vybrat",
+			"primary",
+			"form",
+			"closest",
+			"submit",
+			"modal",
+			"text",
+			"val",
+			"glyphicon-check",
+			"clearfix",
+			"skryteInfo",
+			"btn-default",
+			"bardump",
+			"zadny",
+			"žadný",
+			"tester_id",
+			"foreach",
+			"pocetNeotestovanych",
+			"tagyVeVerzi",
+			"pocetNeotestovanychZmen",
+			"verejneZmenyVeVerzi",
+			"format",
+			"zmeny",
+			"testy",
+			"*text kurzívou*",
+			"stornoBtn",
+			"test",
+			"verejneZmenyVeVerzi",
+			"zmenyVeVerzi",
+			"COUNT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"nanuky",
+			"ZTPException",
+			"'podnik'",
+			"filtrZmen",
+			"glyphicon-ok",
+			"tagy",
+			"git",
+			",",
+			"&",
+			"|texy|vlna",
+			"\",",
+			"\"",
+			"Monitorování - ",
+			"sw3firem/common",
+			"\"",
+			"{$basePath}/texyla",
+			"modalDiv",
+			"$jeTesterova",
+			"$jeAutorova",
+			"$this->invalidateControl('filtr');",
+			"label label-default",
+			"class=\"label default\"",
+			"class=\"label\"",
+			"pocetZmenBezTestera",
+			"pocetTesterovychZmen",
+			"pocetNeotestovanychZmen",
+			"pocetAutorovychZmen",
+			"col-xs",
+			"mark",
+			"'",
+			":",
+			"Verze:zmeny",
+			"_id",
+			"$verzeId",
+			"badge",
+			"label label-default",
+			"badge",
+			"label-primary",
+			"label-info",
+			"router",
+			"$zmena->tester_id",
+			"$zmena->autor_id",
+			"\"",
+			"-",
+			"'",
+			"ulozitPoradi",
+			"id",
+			"persistent",
+			"username",
+			"key",
+			"username",
+			"$zmeny",
+			"  ",
+			".uvodniStrana",
+			"h2",
+			"request",
+			"e6e6e6",
+			"$r .=",
+			"$testovaci",
+			"$this->filtr",
+			"h3",
+			"h4",
+			"h3",
+			"$osoba",
+			"filtry",
+			"",
+			"label-primary",
+			"  ",
+			"aktivniLide",
+			"  ",
+			"id=\"vyber",
+			"#vyber",
+			"id=\"vyber",
+			"'",
+			"->jmeno|upper",
+			"$verze",
+			"skryteInfo",
+			"$chyba",
+			"Verze:zmeny",
+			"$this->verzeId",
+			"Verze:zmeny",
+			":zmena",
+			"$verzeId",
+			"$id",
+			"$zmenaId",
+			"$verzeId",
+			"$pohled",
+			"$zmena",
+			"$z",
+			" ",
+			"-",
+			"wfLng",
+			"lcPodnik",
+			"glViceOJ",
+			"elSelectOrgUnit",
+			"lcSeznam",
+			"lcPodnik",
+			"lcPodniky",
+			"lcForm15",
+			"lcForm14",
+			"lcFormAAA",
+			"cli-uloz-seznamOJ",
+			"cli-seznamOJ",
+			"glSeznamOJ",
+			"",
+			"energie",
+			"kontrola",
+			"nacteni",
+			"nacteniDat",
+			"wfData",
+			"$fr",
+			".ttt",
+			"keyword.source.abl",
+			"",
+			"aaa",
+			"gcUzel"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "nanuky.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"export",
+				"app\\templates\\@export.latte"
+			],
+			[
+				"expo",
+				"www\\css\\export.css"
+			],
+			[
+				"scren",
+				"www\\css\\screen.css"
+			],
+			[
+				"print",
+				"www\\css\\print.css"
+			],
+			[
+				"zmeny.",
+				"app\\templates\\Verze\\zmeny.latte"
+			],
+			[
+				"zmenypre",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"zmena",
+				"app\\templates\\Zmeny\\zmena.latte"
+			],
+			[
+				"ztps",
+				"app\\ztp.sql"
+			],
+			[
+				"base",
+				"app\\presenters\\BasePresenter.php"
+			],
+			[
+				"404",
+				"app\\templates\\Error\\404.latte"
+			],
+			[
+				"zmeny",
+				"app\\templates\\Verze\\zmeny.latte"
+			],
+			[
+				"main",
+				"www\\js\\main.js"
+			],
+			[
+				"reposti",
+				"app\\model\\Repository.php"
+			],
+			[
+				"scre",
+				"www\\css\\screen.css"
+			],
+			[
+				"lay",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"zmere",
+				"app\\model\\ZmenyRepository.php"
+			],
+			[
+				"verzre",
+				"app\\model\\VerzeRepository.php"
+			],
+			[
+				"verpre",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"la",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"oso",
+				"app\\templates\\Verze\\osoba.latte"
+			],
+			[
+				"verzpre",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"lide",
+				"app\\model\\LideRepository.php"
+			],
+			[
+				"verzp",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"repo",
+				"app\\model\\LideRepository.php"
+			],
+			[
+				"repos",
+				"app\\model\\Repository.php"
+			],
+			[
+				"zmerepos",
+				"app\\model\\ZmenyRepository.php"
+			],
+			[
+				"m",
+				"www\\js\\main.js"
+			],
+			[
+				"verzep",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"zmen",
+				"app\\templates\\Verze\\zmeny.latte"
+			],
+			[
+				"verze",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"info",
+				"app\\templates\\Verze\\info.latte"
+			],
+			[
+				"chyba",
+				"app\\templates\\Chyby\\chyba.latte"
+			],
+			[
+				"scree",
+				"www\\css\\screen.css"
+			],
+			[
+				"zmenyla",
+				"app\\templates\\Verze\\zmeny.latte"
+			],
+			[
+				"zmep",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"layou",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"el",
+				"app\\templates\\Verze\\export.latte"
+			],
+			[
+				"bas",
+				"app\\presenters\\BasePresenter.php"
+			],
+			[
+				"ulo",
+				"www\\ulohy.json"
+			],
+			[
+				"zme",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"laoyu",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"uloh",
+				"www\\ulohy.json"
+			],
+			[
+				"ul",
+				"www\\ulohy.json"
+			],
+			[
+				"screes",
+				"www\\css\\screen.css"
+			],
+			[
+				"zmenyp",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"tex",
+				"app\\presenters\\TexylaPresenter.php"
+			],
+			[
+				"ba",
+				"app\\presenters\\BasePresenter.php"
+			],
+			[
+				"hle",
+				"app\\templates\\Zmeny\\hledat.latte"
+			],
+			[
+				"ver",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"prese",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"chy",
+				"app\\components\\ChybyControl.latte"
+			],
+			[
+				"chypre",
+				"app\\presenters\\ChybyPresenter.php"
+			],
+			[
+				"zmena.",
+				"app\\templates\\Zmeny\\zmena.latte"
+			],
+			[
+				"expola",
+				"app\\templates\\Verze\\export.latte"
+			],
+			[
+				"zmenpre",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"conlo",
+				"app\\config\\config.local.neon"
+			],
+			[
+				"con",
+				"app\\config\\config.local.neon"
+			],
+			[
+				"chybyla",
+				"app\\components\\ChybyControl.latte"
+			],
+			[
+				"chybyp",
+				"app\\presenters\\ChybyPresenter.php"
+			],
+			[
+				"conf",
+				"app\\config\\config.local.neon"
+			],
+			[
+				"teste",
+				"app\\components\\TesteriControl.php"
+			],
+			[
+				"chybpre",
+				"app\\presenters\\ChybyPresenter.php"
+			],
+			[
+				"zmepre",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"tester",
+				"app\\components\\TesteriControl.latte"
+			],
+			[
+				"verz",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"hleda",
+				"app\\templates\\Zmeny\\hledat.latte"
+			],
+			[
+				"presen",
+				"app\\presenters\\ChybyPresenter.php"
+			],
+			[
+				"verzee",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"test",
+				"app\\components\\TesteriControl.php"
+			],
+			[
+				"zn",
+				"app\\templates\\Verze\\zmeny.latte"
+			],
+			[
+				"sezna",
+				"app\\templates\\Verze\\seznam.latte"
+			],
+			[
+				"sc",
+				"www\\css\\screen.css"
+			],
+			[
+				"boo",
+				"app\\bootstrap.php"
+			],
+			[
+				"zmenyr",
+				"app\\model\\ZmenyRepository.php"
+			],
+			[
+				"chybala",
+				"app\\templates\\Chyby\\chyba.latte"
+			],
+			[
+				"bo",
+				"app\\bootstrap.php"
+			],
+			[
+				"erro",
+				"app\\presenters\\ErrorPresenter.php"
+			],
+			[
+				"boots",
+				"app\\bootstrap.php"
+			],
+			[
+				"err",
+				"app\\presenters\\ErrorPresenter.php"
+			],
+			[
+				"ex",
+				"app\\exceptions.php"
+			],
+			[
+				"chyre",
+				"app\\model\\ChybyRepository.php"
+			],
+			[
+				"zmpre",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"test.",
+				"app\\templates\\Zmeny\\test.latte"
+			],
+			[
+				"verzpr",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"zm",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"b",
+				"app\\presenters\\BasePresenter.php"
+			],
+			[
+				"sezn",
+				"app\\templates\\Verze\\seznam.latte"
+			],
+			[
+				"defa",
+				"app\\templates\\Verze\\default.latte"
+			],
+			[
+				"layo",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"testzm",
+				"app\\templates\\Verze\\testy-zmena.latte"
+			],
+			[
+				"zmezme",
+				"app\\templates\\Verze\\zmeny-zmena.latte"
+			],
+			[
+				"v",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"testy",
+				"app\\templates\\Verze\\testy.latte"
+			],
+			[
+				"teszm",
+				"app\\templates\\Verze\\testy-zmena.latte"
+			],
+			[
+				"expla",
+				"app\\templates\\Verze\\export.latte"
+			],
+			[
+				"prin",
+				"www\\css\\print.css"
+			],
+			[
+				"expc",
+				"www\\css\\export.css"
+			],
+			[
+				"testeri",
+				"app\\components\\TesteriControl.latte"
+			],
+			[
+				"expcs",
+				"www\\css\\export.css"
+			],
+			[
+				"inde",
+				"www\\index.php"
+			],
+			[
+				"se",
+				"app\\templates\\Verze\\seznam.latte"
+			],
+			[
+				"verzere",
+				"app\\model\\VerzeRepository.php"
+			],
+			[
+				"zmer",
+				"app\\model\\ZmenyRepository.php"
+			],
+			[
+				"e",
+				"www\\css\\export.css"
+			],
+			[
+				"testz",
+				"app\\templates\\Verze\\testy-zmena.latte"
+			],
+			[
+				"ch",
+				"app\\components\\ChybyControl.latte"
+			],
+			[
+				"verpr",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				"testtestz",
+				"app\\templates\\Verze\\testy-zmena.latte"
+			],
+			[
+				"expocs",
+				"www\\css\\export.css"
+			],
+			[
+				"v11",
+				"app\\v1100.sql"
+			],
+			[
+				".sl",
+				"app\\ztp.sql"
+			],
+			[
+				"zmenyl",
+				"app\\templates\\Verze\\zmeny.latte"
+			],
+			[
+				".css",
+				"www\\css\\print.css"
+			],
+			[
+				"zmenzme",
+				"app\\templates\\Verze\\zmeny-zmena.latte"
+			],
+			[
+				"chyby",
+				"app\\components\\ChybyControl.latte"
+			],
+			[
+				"testzme",
+				"app\\templates\\Verze\\testy-zmena.latte"
+			],
+			[
+				"verzepre",
+				"app\\presenters\\VerzePresenter.php"
+			],
+			[
+				".js",
+				"www\\js\\main.js"
+			],
+			[
+				"modezme",
+				"app\\model\\ZmenyRepository.php"
+			],
+			[
+				"z",
+				"app\\presenters\\ZmenyPresenter.php"
+			],
+			[
+				"zmenyzme",
+				"app\\templates\\Verze\\zmeny-zmena.latte"
+			],
+			[
+				"route",
+				"app\\router\\RouterFactory.php"
+			],
+			[
+				"zmezm",
+				"app\\templates\\Verze\\zmeny-zmena.latte"
+			],
+			[
+				"stav",
+				"app\\components\\StavControl.latte"
+			],
+			[
+				"chyb",
+				"app\\presenters\\ChybyPresenter.php"
+			],
+			[
+				"testy-",
+				"app\\templates\\Verze\\testy-zmena.latte"
+			],
+			[
+				"zmeny-",
+				"app\\templates\\Verze\\zmeny-zmena.latte"
+			],
+			[
+				"defau",
+				"app\\templates\\Verze\\default.latte"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"G:\\repos\\dhe\\energis.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 87.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"dts"
+			],
+			[
+				"stringda",
+				"StringDat"
+			],
+			[
+				"moves",
+				"MoveSEC"
+			],
+			[
+				"mo",
+				"MoveSEC"
+			],
+			[
+				"isem",
+				"IsEmptyChar"
+			],
+			[
+				"date",
+				"Date"
+			],
+			[
+				"exuze",
+				"ExistUzel"
+			],
+			[
+				"getcass",
+				"GetCasString"
+			],
+			[
+				"cli-d",
+				"cli-dej-datum"
+			]
+		],
+		"width": 490.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 180.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

@@ -15,13 +15,21 @@
                 var obj = this;
                 event.preventDefault();
                 event.stopImmediatePropagation();
-                $('<div id="dConfirm" class="reveal-modal tiny" data-reveal></div>').appendTo('body');
+                $('<div id="dConfirm" class="modal"></div>').appendTo('body');
                 $('#dConfirm').html(
-                  '<h3>' + $(obj).data('confirm-title') + '</h3>' +
-                  '<p>' + $(obj).data('confirm-text') + '</p>' +
-                  '<a id="dConfirmCancel" class="button secondary">Ne</a>&nbsp;' +
-                  '<a id="dConfirmOk" class="button success">Ano</a>' +
-                  '<a class="close-reveal-modal">&#215;</a>'
+                  '<div class="modal-dialog"><div class="modal-content">'+
+                  '<div class="modal-header">' +
+                  '  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>' +
+                  '  <h3>' + $(obj).data('confirm-title') + '</h3>' +
+                  '</div>' +
+                  '<div class="modal-body">' +
+                  '  <p>' + $(obj).data('confirm-text') + '</p>' +
+                  '</div>' +
+                  '<div class="modal-footer">' +
+                  '  <a id="dConfirmCancel" class="btn btn-default">Ne</a>&nbsp;' +
+                  '  <a id="dConfirmOk" class="btn btn-success">Ano</a>' +
+                  '</div>' +
+                  '</div></div>'
                 );
                 $('#dConfirmOk').on('click', function () {
                     var tagName = $(obj).prop("tagName");
@@ -37,15 +45,15 @@
                             document.location = obj.href;
                         }
                     }
-                    $('#dConfirm').foundation('reveal', 'close');
+                    $('#dConfirm').modal('hide');
                 });
                 $('#dConfirmCancel').on('click', function () {
-                  $('#dConfirm').foundation('reveal', 'close');
+                  $('#dConfirm').modal('hide');
                 });
-                $('#dConfirm').foundation('reveal', 'open');
-                $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+                $('#dConfirm').modal('show');
+                $('#dConfirm').on('hidden.bs.modal', function (e) {
                   $('#dConfirm').remove();
-                });
+                })
                 return false;
             });
         }

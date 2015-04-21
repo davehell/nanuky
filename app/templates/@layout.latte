@@ -1,71 +1,56 @@
-{**
- * Layout template.
- *
- * @param string   $basePath web base path
- * @param string   $robots   tell robots how to index the content of a page (optional)
- * @param array    $flashes  flash messages
- *}
-
 <!DOCTYPE html>
 <html class="no-js" lang="cs">
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta charset="utf-8">
   <meta name="description" content="">
-  <meta name="robots" content="{$robots}" n:ifset="$robots">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Nanuky - {block title}{/block}</title>
-  <link rel="stylesheet" href="{$basePath}/css/foundation.min.css">
-  <link rel="stylesheet" href="{$basePath}/css/foundation-icons.css">
+  <link href="{$basePath}/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{$basePath}/css/bootstrap-theme.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{$basePath}/css/screen.css">
-  <link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
   <link rel="shortcut icon" href="{$basePath}/favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   {block head}{/block}
 </head>
 
 <body>
-  <script> document.documentElement.className+=' js' </script>
+  <div class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a n:href="Mrazak:, 'uziv' => null" class="navbar-brand"><span class="glyphicon glyphicon-ice-lolly-tasted"></span> Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a>
+      </div>
 
-  <div class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a n:href="Mrazak:">Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
+      {snippet dluh}
+      <div n:if="$uziv" class="nav navbar-nav navbar-left">
+        <p class="navbar-text">úvěr {$dluh}&nbsp;Kč</p>
+        <a n:if="$dluh" href="#" title="Splatit dluh" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-usd"></span></a>
+      </div>
+      {/snippet}
 
-    <div class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul n:if="$uziv && $uziv->jmeno == 'DHE'" class="right">
+      <ul n:if="$uziv && $uziv->jmeno == 'DHE'" class="nav navbar-nav navbar-right">
         <li><a n:href="Mrazak:pridat">Naskladnění</a></li>
         <li><a n:href="Mrazak:dluhy">Dluhy</a></li>
         <li><a n:href="Mrazak:nakupy">Nákupy</a></li>
       </ul>
+    </div> <!-- .container -->
+  </div> <!-- .navbar -->
 
-      <!-- Left Nav Section -->
-      <ul n:if="$uziv" class="left">
-        <li n:snippet="dluh" class="active"><a href="#" >úvěr {$dluh}&nbsp;Kč</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="row">
-  {snippet flash}
-  <div n:foreach="$flashes as $flash" class="alert-box {$flash->type}">{$flash->message}</div>
-  {/snippet}
-  {include content}
-  </div>
+  <div class="container">
+    {snippet flash}
+    <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
+    {/snippet}
+    {include content}
+  </div> <!-- .container -->
 
-  {block scripts}
   <script src="{$basePath}/js/jquery.js"></script>
   <script src="{$basePath}/js/nette.ajax.js"></script>
   <script src="{$basePath}/js/confirm.dialog.js"></script>
-  <script src="{$basePath}/js/foundation.min.js"></script>
+  <script src="{$basePath}/js/bootstrap.min.js"></script>
   <script src="{$basePath}/js/netteForms.js"></script>
   <script src="{$basePath}/js/main.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-  {/block}
+  {block scripts}{/block}
 </body>
 </html>

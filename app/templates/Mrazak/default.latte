@@ -7,7 +7,7 @@ Zákazníci
 <h1>Kdo jsi?</h1>
 
 <div id="kupci" class="row">
-  <div n:foreach="$seznamKupcu as $jmeno => $prijmeni" class="kupec columns small-6 large-2 {last}end{/last}">
+  <div n:foreach="$seznamKupcu as $jmeno => $prijmeni" class="kupec col-md-2 col-sm-3 col-xs-4">
     <a n:href="Mrazak:nabidka $jmeno">{$jmeno} <div>{$prijmeni}</div></a>
   </div>
 </div>

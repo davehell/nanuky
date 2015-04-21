@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path": "C:\\wamp\\www\\nanuky\\app"
+		},
+		{
+			"path": "C:\\wamp\\www\\nanuky\\www"
+		},
+		{
+			"path": "C:\\wamp\\www\\nanuky\\tests"
+		}
+	],
+	"settings":
+	{
+		"tab_size": 2,
+		"translate_tabs_to_spaces": true,
+		"trim_automatic_white_space": true,
+		"trim_trailing_white_space_on_save": true
+	}
+}

@@ -15,7 +15,7 @@ use App\Model\NanukRepository,
  */
 final class MrazakPresenter extends BasePresenter
 {
-  
+
   /**
    * @var MrazakRepository
    * @inject
@@ -34,14 +34,12 @@ final class MrazakPresenter extends BasePresenter
    */
   public $kupec;
 
+
   public function beforeRender()
   {
-    $this->template->uziv = null;
+    parent::beforeRender();
   }
 
-  /**
-   * @param string kupec
-   */
   public function renderDefault()
   {
     $this->template->seznamKupcu = $this->kupec->seznamKupcu();
@@ -49,10 +47,6 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderNabidka($uziv)
   {
-    $kupec = $this->kupec->get(strtoupper($uziv));
-    if(!$kupec) throw new \Nette\Application\BadRequestException("Neexistující kupec.");
-    $this->template->uziv = $kupec;
-    $this->template->dluh = $this->kupec->zaokrouhliDluh($kupec->dluh);
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik();
     $this->template->oblibene = $this->mrazak->oblibene($uziv);
@@ -89,15 +83,15 @@ final class MrazakPresenter extends BasePresenter
         }
         else {
           $this->odepsatNanuk($konkretniKus->id);
-          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', '');
+          $this->flashMessage('Odepsán nanuk ' . $konkretniKus->nazev . ' za ' . $konkretniKus->cena . ' Kč', 'success');
         }
       }
       catch(NanukyException $e) {
-        $this->flashMessage($e->getMessage(), 'alert');
+        $this->flashMessage($e->getMessage(), 'danger');
       }
     }
     else {
-      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'alert');
+      $this->flashMessage('Jdeš pozdě! Tento nanuk už na mražáku není.', 'danger');
     }
 
     if ($this->isAjax()) {
@@ -116,7 +110,7 @@ final class MrazakPresenter extends BasePresenter
     if(!$kupec) throw new NanukyException('Zákazník se jménem "' . $jmeno . '" neexistuje.');
 
     $zaplaceno = $this->kupec->splatkaDluhu($kupec, $castka);
-    $this->flashMessage($kupec->jmeno. ' splatil dluh ' . $zaplaceno . ' Kč', '');
+    $this->flashMessage($kupec->jmeno. ' splatil dluh ' . $zaplaceno . ' Kč', 'success');
 
     if ($this->isAjax()) {
       $this->invalidateControl('dluznici');
@@ -131,10 +125,10 @@ final class MrazakPresenter extends BasePresenter
   {
     try {
       $this->zrusitNakup($id);
-      $this->flashMessage('Nákup byl zrušen.', '');
+      $this->flashMessage('Nákup byl zrušen.', 'success');
     }
     catch(NanukyException $e) {
-      $this->flashMessage($e->getMessage(), 'alert');
+      $this->flashMessage($e->getMessage(), 'danger');
     }
 
     if ($this->isAjax()) {
@@ -142,7 +136,7 @@ final class MrazakPresenter extends BasePresenter
       $this->invalidateControl('flash');
     }
   }
-  
+
   /**
    * Formulář pro přidání nanuku na mražák
    * @return Form
@@ -180,7 +174,7 @@ final class MrazakPresenter extends BasePresenter
   {
     $this->naskladnit($form->getValues());
 
-    $this->flashMessage('Přidáno', '');
+    $this->flashMessage('Úspěšně přidáno do mrazáků.', 'success');
     $this->redirect('pridat');
   }
 
@@ -273,7 +267,7 @@ final class MrazakPresenter extends BasePresenter
 
     if($kupec) {
       $dataKupec = array(
-        'dluh' => $kupec->dluh - $nakup->cena_prodej
+        'dluh' => max(0, $kupec->dluh - $nakup->cena_prodej)
       );
     }
 

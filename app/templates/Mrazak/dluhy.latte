@@ -6,18 +6,17 @@
 
 {snippet dluznici}
 {if $dluznici}
-  <div class="row collapse" n:foreach="$dluznici as $jmeno => $dluh">
-    <div class="small-1 columns">
-      <label for="dluh-{$jmeno}" class="inline">{$jmeno} </label>
+  <form action="{link dluh!}" class="ajax form-horizontal" n:foreach="$dluznici as $jmeno => $dluh">
+    <div class="form-group" >
+      <label for="dluh-{$jmeno}" class="col-sm-1 control-label">{$jmeno}</label>
+      <div class="col-sm-2">
+        <input type="text" name="castka" class="form-control" value="{$dluh}">
+      </div>
+      <input name="jmeno" type="hidden" value="{$jmeno}">
+      <button type="submit" class="btn btn-default" title="Smáznout dluh od {$jmeno}">Zaplatit</button>
     </div>
-    <div class="small-1 columns">
-      <input id="dluh-{$jmeno}" name="dluh" type="text" value="{$dluh}">
-    </div>
-    <div class="small-1 columns end">
-      <button title="Smáznout dluh od {$jmeno}" data-jmeno="{$jmeno}" data-url="{link dluh!, $jmeno}" class="dluh button postfix">Zaplatit</button>
-    </div>
-  </div>
+  </form>
 {else}
-  <div class="alert-box success">Konečně nikdo nic nedluží.</div>
+  <div class="alert alert-info">Nikdo nic nedluží.</div>
 {/if}
 {/snippet}

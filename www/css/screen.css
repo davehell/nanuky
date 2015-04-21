@@ -1,22 +1,15 @@
-.top-bar .title-area .name h1 a  {
-  background: url('../images/nanuk.png') 5px 10px no-repeat;
-  padding-left: 40px;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
-.top-bar .title-area .name h1 a span {
-  margin-left: 20px;
+.navbar {
+  border-radius: 0;
 }
-.alert-box {
-  margin-top: 20px;
-}
-
-.table > tbody > tr > td {
-  vertical-align: middle;
-}
-#nabidka {
-  margin-top: 20px;
+.navbar-brand .glyphicon {
+  color: #fff;
 }
 #nabidka .nanuk {
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 #nabidka h3 {
   color: #000;
@@ -43,10 +36,9 @@
 }
 #nabidka .labels {
   position: absolute;
-  top: 55px;
+  top: 30px;
 }
 #nabidka .labels .label{
-  display: block;
   font-weight: normal;
 }
 #nabidka .info {
@@ -75,13 +67,6 @@
   font-size: 14px;
 }
 
-#nakupy {
-  width: 100%;
-}
-#nakupy td a, #nabidka .nanuk .info a {
-  color: #f08a24;
-}
-
-.table> tbody > tr:hover > td, .table> tbody > tr:hover > th {
-  background-color: #c4e3f3;
+.table-hover > tbody > tr:hover {
+  background-color: #eef4f9;
 }

@@ -41,7 +41,7 @@ class KupecRepository extends Repository
     $castka = max(0, intval($castka));
     if($castka > 0) {
       $kupec->update(array(
-        "dluh" => $kupec->dluh - $castka,
+        "dluh" => max(0, $kupec->dluh - $castka),
         "zaplaceno" => $kupec->zaplaceno + $castka
       ));
     }

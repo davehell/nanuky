@@ -1,0 +1,17 @@
+{block content}
+
+<h1 n:inner-block="title">
+  Splátka dluhu
+</h1>
+
+<dl class="dl-horizontal">
+  <dt>částka:</dt>
+  <dd><strong>{$dluh}&nbsp;Kč</strong></dd>
+  <dt>číslo účtu:</dt>
+  <dd>19-3767850207 / 0100</dd>
+  <dt>zpráva pro příjemce:</dt>
+  <dd>{$uziv}&nbsp;nanuky</dd>
+</dl>
+
+
+<img alt="QR platba" src="https://api.paylibo.com/paylibo/generator/czech/image?accountPrefix=19&accountNumber=3767850207&bankCode=0100&amount={$dluh}&currency=CZK&message={$uziv}%20nanuky"/>

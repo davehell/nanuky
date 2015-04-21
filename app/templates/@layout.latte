@@ -25,7 +25,7 @@
       {snippet dluh}
       <div n:if="$uziv" class="nav navbar-nav navbar-left">
         <p class="navbar-text">úvěr {$dluh}&nbsp;Kč</p>
-        <a n:if="$dluh" href="#" title="Splatit dluh" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-usd"></span></a>
+        <a n:href="Mrazak:platba, $uziv->jmeno" n:if="$dluh" title="Splatit dluh" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-usd"></span></a>
       </div>
       {/snippet}
 
@@ -36,7 +36,6 @@
       </ul>
     </div> <!-- .container -->
   </div> <!-- .navbar -->
-
 
   <div class="container">
     {snippet flash}

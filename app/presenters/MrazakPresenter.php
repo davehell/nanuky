@@ -67,6 +67,11 @@ final class MrazakPresenter extends BasePresenter
     $this->template->nakupy = $this->mrazak->posledniNakupy();
   }
 
+  public function renderPlatba($uziv)
+  {
+
+  }
+
   /**
    * @param int druh nanuku
    * @param string kupec

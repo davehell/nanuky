@@ -22,10 +22,10 @@
         </div>
       </a>
       <p class="info clearfix">
-        <span class="cena pull-left">{$ceny[$nanuk->id]} Kč</span>
+        <span class="cena pull-left"><strong>{$ceny[$nanuk->id]} Kč</strong> / 1 ks</span>
         <span class="pull-right">
           <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-xs btn-warning"><span class="glyphicon glyphicon-thumbs-down"></span></a>
-          {$nanuk->pocet} ks
+          skladem {$nanuk->pocet} ks
         </span>
       </p>
     </div>

@@ -23,10 +23,10 @@
       </div>
 
       {snippet dluh}
-      <div n:if="$uziv" class="nav navbar-nav navbar-left">
-        <p class="navbar-text">úvěr {$dluh}&nbsp;Kč</p>
-        <a n:href="Mrazak:platba, $uziv->jmeno" n:if="$dluh" title="Splatit dluh" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-usd"></span></a>
-      </div>
+      <ul n:if="$uziv" class="nav navbar-nav navbar-left">
+        <li><p class="navbar-text">úvěr {$dluh}&nbsp;Kč</p></li>
+        <li><a n:href="Mrazak:platba, $uziv->jmeno" n:if="$dluh" title="Splatit dluh">Zaplatit</a></li>
+      </ul>
       {/snippet}
 
       <ul n:if="$uziv && $uziv->jmeno == 'DHE'" class="nav navbar-nav navbar-right">

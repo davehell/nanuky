@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"di",
+				"display"
+			],
+			[
 				"ma",
 				"margin-left"
 			],
@@ -175,6 +179,62 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/templates/@layout.latte",
+			"settings":
+			{
+				"buffer_size": 2248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/presenters/MrazakPresenter.php",
+			"settings":
+			{
+				"buffer_size": 6768,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/Mrazak/platba.latte",
+			"settings":
+			{
+				"buffer_size": 474,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+			"settings":
+			{
+				"buffer_size": 20982,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/router/RouterFactory.php",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/odecty/config.xml",
+			"settings":
+			{
+				"buffer_size": 555,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/dhe/public/www/index.html",
+			"settings":
+			{
+				"buffer_size": 11062,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "energis",
 	"build_system_choices":
@@ -183,8 +243,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 187.0,
-		"last_filter": "Snippet: cl",
+		"height": 62.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -557,6 +617,33 @@
 	],
 	"file_history":
 	[
+		"/C/wamp/www/nanuky/app/templates/Mrazak/nakupy.latte",
+		"/C/wamp/www/nanuky/app/model/MrazakRepository.php",
+		"/C/wamp/www/nanuky/www/css/screen.css",
+		"/C/wamp/www/nanuky/app/presenters/MrazakPresenter.php",
+		"/C/wamp/www/nanuky/app/model/KupecRepository.php",
+		"/C/wamp/www/nanuky/app/templates/Mrazak/dluhy.latte",
+		"/C/wamp/www/nanuky/app/presenters/BasePresenter.php",
+		"/C/wamp/www/ztp-ostra/app/presenters/VerzePresenter.php",
+		"/C/wamp/www/nanuky/app/router/RouterFactory.php",
+		"/C/wamp/www/nanuky/app/templates/@layout.latte",
+		"/C/wamp/www/nanuky/app/templates/Mrazak/nabidka.latte",
+		"/C/wamp/www/nanuky/www/js/main.js",
+		"/C/wamp/www/nanuky/app/templates/Mrazak/default.latte",
+		"/C/wamp/www/nanuky/app/templates/Mrazak/pridat.latte",
+		"/C/wamp/www/ztp-ostra/app/presenters/BasePresenter.php",
+		"/C/wamp/www/nanuky/app/config/config.local.neon",
+		"/C/wamp/www/nanuky/www/js/confirm.dialog.js",
+		"/C/wamp/www/nanuky/app/config/config.neon",
+		"/C/wamp/www/ztp-ostra/www/css/screen.css",
+		"/C/wamp/www/ztp-ostra/app/templates/@layout.latte",
+		"/G/repos/dhe/energis/src/eneapi/f-inforwe.p",
+		"/G/repos/dhe/energis/src/eneapi/f-fcedb4.p",
+		"/C/wamp/www/ztp/composer.json",
+		"/C/wamp/www/nanuky/composer.json",
+		"/C/wamp/www/nanuky/www/.maintenance.php",
+		"/C/wamp/www/nanuky/www/index.php",
+		"/C/wamp/www/nanuky/www/robots.txt",
 		"/C/wamp/www/nanuky/nanuky.sublime-project",
 		"/C/wamp/www/ztp/app/templates/@layout.latte",
 		"/C/wamp/www/ztp/www/css/print.css",
@@ -605,7 +692,6 @@
 		"/D/Sublime Text/Data/Packages/User/Preferences.sublime-settings",
 		"/G/repos/dhe/energis/src/eneweb/diag_max.p",
 		"/C/wamp/www/ztp/ztp.sublime-project",
-		"/C/wamp/www/ztp/composer.json",
 		"/C/wamp/www/ztp/app/config/config.neon",
 		"/C/wamp/www/gitlist/config.ini",
 		"/C/wamp/www/gitlist/vendor/klaussilveira/gitter/lib/Gitter/Client.php",
@@ -658,33 +744,7 @@
 		"/C/wamp/www/Texyla-Nette-2.1/app/classes/TexylaLoader.php",
 		"/C/wamp/www/Texyla-Nette-2.1/app/presenters/BasePresenter.php",
 		"/C/wamp/www/Texyla-Nette-2.1/app/templates/Homepage/default.latte",
-		"/C/wamp/www/Texyla-Nette-2.1/app/presenters/HomepagePresenter.php",
-		"/C/wamp/www/Texyla-Nette-2.1/app/config/config.neon",
-		"/C/wamp/www/Texyla-Nette-2.1/app/classes/MyTexy.php",
-		"/C/wamp/www/ztp/app/templates/Zmeny/hledat.latte",
-		"/C/wamp/www/ztp/www/fonts/lmroman9-regular.otf",
-		"/C/wamp/www/ztp/app/presenters/ChybyPresenter.php",
-		"/C/wamp/www/ztp/www/js/modal.js",
-		"/C/wamp/www/ztp/app/templates/@modal.latte",
-		"/C/wamp/www/ztp/app/components/Texy/modules/TexyFigureModule.php",
-		"/C/wamp/www/ztp/app/components/TesteriControl.php",
-		"/C/wamp/www/ztp/app/exceptions.php",
-		"/C/wamp/www/ztp/www/fonts/lmroman9-regular-webfont.svg",
-		"/C/wamp/www/ztp/app/components/Texy/TexyUtf.php",
-		"/G/repos/dhe/sw3firem/instar/struktura-db/dbstrukt2.p",
-		"/G/repos/dhe/energis/src/i/iput.i",
-		"/G/repos/dhe/sw3firem/instar/struktura-db/dbstrukt.p",
-		"/G/repos/dhe/energis/src/i/i-prstat.i",
-		"/G/repos/dhe/energis/src/i/INFO.i",
-		"/C/wamp/www/ztp/app/components/Texy/modules/TexyBlockModule.php",
-		"/C/wamp/www/ztp/app/templates/Verze/default.latte",
-		"/C/wamp/www/ztp/www/js/nette.ajax.js",
-		"/G/repos/dhe/energis/src/i/iwdef.i",
-		"/G/repos/dhe/energis/src/i/i-fce.i",
-		"/G/repos/dhe/energis/src/i/ifceweb.i",
-		"//Silver/wrk9/dhe/compile/compile.bat",
-		"/C/wamp/www/ztp/backup.bat",
-		"/G/repos/dhe/energis/src/i/idefvar.i"
+		"/C/wamp/www/Texyla-Nette-2.1/app/presenters/HomepagePresenter.php"
 	],
 	"find":
 	{
@@ -718,6 +778,51 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"strong",
+			"ano",
+			"převodem",
+			"code",
+			": ",
+			" ano",
+			"<li>",
+			"ano",
+			"hotovost",
+			"stravenky",
+			"flash",
+			"snipp",
+			"Info",
+			"info",
+			"dluh",
+			"flashMessage",
+			"info",
+			"flashM",
+			"flash",
+			"kupec",
+			"uziv",
+			"lide",
+			"text",
+			"castka",
+			"dluh",
+			"div",
+			"form",
+			"div",
+			"success",
+			"flashMessage",
+			"alert",
+			"document",
+			"dConfirm",
+			"myModal",
+			"foundation",
+			"div",
+			"Zaplatit",
+			"button",
+			"ul",
+			"#dluh a",
+			".dluh",
+			"dluh",
+			"jeOblibeny",
+			"<<<<<<< HEAD",
+			">>>>",
 			"ztp",
 			"break",
 			"TRUE",
@@ -800,52 +905,7 @@
 			"verze",
 			"odebratProstredi",
 			"seznamLidi",
-			"jmeno",
-			"id",
-			"fetchPairs",
-			"zmeny",
-			"neopraveneChyby",
-			"opraveno",
-			"vsechnyChybyOpraveny",
-			"nastavOkVsem",
-			"změny",
-			"zmena",
-			"změny",
-			"zmena",
-			"click",
-			"submit",
-			"btn btn-primary",
-			"<span class=\"glyphicon glyphicon-ok\"></span>",
-			"Vybrat",
-			"primary",
-			"form",
-			"closest",
-			"submit",
-			"modal",
-			"text",
-			"val",
-			"glyphicon-check",
-			"clearfix",
-			"skryteInfo",
-			"btn-default",
-			"bardump",
-			"zadny",
-			"žadný",
-			"tester_id",
-			"foreach",
-			"pocetNeotestovanych",
-			"tagyVeVerzi",
-			"pocetNeotestovanychZmen",
-			"verejneZmenyVeVerzi",
-			"format",
-			"zmeny",
-			"testy",
-			"*text kurzívou*",
-			"stornoBtn",
-			"test",
-			"verejneZmenyVeVerzi",
-			"zmenyVeVerzi",
-			"COUNT"
+			"jmeno"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -853,6 +913,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"a#dluh",
+			"#dluh",
 			"nanuky",
 			"ZTPException",
 			"'podnik'",
@@ -979,8 +1041,640 @@
 	"groups":
 	[
 		{
+			"selected": 6,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/templates/@layout.latte",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 6,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/presenters/MrazakPresenter.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1297,
+								1297
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 69,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/templates/Mrazak/platba.latte",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 8,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20982,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2671,
+								2671
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 68,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 921.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/router/RouterFactory.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 0,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/odecty/config.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 11,
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/dhe/public/www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								771,
+								771
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 17,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1041,6 +1735,62 @@
 		"selected_items":
 		[
 			[
+				"route",
+				"app\\router\\RouterFactory.php"
+			],
+			[
+				"naku",
+				"app\\templates\\Mrazak\\nakupy.latte"
+			],
+			[
+				"dlu",
+				"app\\templates\\Mrazak\\dluhy.latte"
+			],
+			[
+				"mraza",
+				"app\\presenters\\MrazakPresenter.php"
+			],
+			[
+				"mra",
+				"app\\model\\MrazakRepository.php"
+			],
+			[
+				"layou",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"prida",
+				"app\\templates\\Mrazak\\pridat.latte"
+			],
+			[
+				"base",
+				"app\\presenters\\BasePresenter.php"
+			],
+			[
+				"lay",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"la",
+				"app\\templates\\@layout.latte"
+			],
+			[
+				"config",
+				"app\\config\\config.neon"
+			],
+			[
+				"confirm",
+				"www\\js\\confirm.dialog.js"
+			],
+			[
+				"main",
+				"www\\js\\main.js"
+			],
+			[
+				"scree",
+				"www\\css\\screen.css"
+			],
+			[
 				"export",
 				"app\\templates\\@export.latte"
 			],
@@ -1073,10 +1823,6 @@
 				"app\\ztp.sql"
 			],
 			[
-				"base",
-				"app\\presenters\\BasePresenter.php"
-			],
-			[
 				"404",
 				"app\\templates\\Error\\404.latte"
 			],
@@ -1085,20 +1831,12 @@
 				"app\\templates\\Verze\\zmeny.latte"
 			],
 			[
-				"main",
-				"www\\js\\main.js"
-			],
-			[
 				"reposti",
 				"app\\model\\Repository.php"
 			],
 			[
 				"scre",
 				"www\\css\\screen.css"
-			],
-			[
-				"lay",
-				"app\\templates\\@layout.latte"
 			],
 			[
 				"zmere",
@@ -1111,10 +1849,6 @@
 			[
 				"verpre",
 				"app\\presenters\\VerzePresenter.php"
-			],
-			[
-				"la",
-				"app\\templates\\@layout.latte"
 			],
 			[
 				"oso",
@@ -1169,20 +1903,12 @@
 				"app\\templates\\Chyby\\chyba.latte"
 			],
 			[
-				"scree",
-				"www\\css\\screen.css"
-			],
-			[
 				"zmenyla",
 				"app\\templates\\Verze\\zmeny.latte"
 			],
 			[
 				"zmep",
 				"app\\presenters\\ZmenyPresenter.php"
-			],
-			[
-				"layou",
-				"app\\templates\\@layout.latte"
 			],
 			[
 				"el",
@@ -1519,38 +2245,6 @@
 			[
 				"z",
 				"app\\presenters\\ZmenyPresenter.php"
-			],
-			[
-				"zmenyzme",
-				"app\\templates\\Verze\\zmeny-zmena.latte"
-			],
-			[
-				"route",
-				"app\\router\\RouterFactory.php"
-			],
-			[
-				"zmezm",
-				"app\\templates\\Verze\\zmeny-zmena.latte"
-			],
-			[
-				"stav",
-				"app\\components\\StavControl.latte"
-			],
-			[
-				"chyb",
-				"app\\presenters\\ChybyPresenter.php"
-			],
-			[
-				"testy-",
-				"app\\templates\\Verze\\testy-zmena.latte"
-			],
-			[
-				"zmeny-",
-				"app\\templates\\Verze\\zmeny-zmena.latte"
-			],
-			[
-				"defau",
-				"app\\templates\\Verze\\default.latte"
 			]
 		],
 		"width": 0.0
@@ -1558,12 +2252,16 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "ene",
 		"selected_items":
 		[
 			[
-				"",
+				"ene",
 				"G:\\repos\\dhe\\energis.sublime-project"
+			],
+			[
+				"",
+				"C:\\wamp\\www\\nanuky\\nanuky.sublime-project"
 			]
 		],
 		"width": 380.0

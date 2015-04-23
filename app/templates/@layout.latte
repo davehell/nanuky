@@ -24,8 +24,8 @@
 
       {snippet dluh}
       <ul n:if="$uziv" class="nav navbar-nav navbar-left">
-        <li><p class="navbar-text">úvěr {$dluh}&nbsp;Kč</p></li>
-        <li><a n:href="Mrazak:platba, $uziv->jmeno" n:if="$dluh" title="Splatit dluh">Zaplatit</a></li>
+        <li><p class="navbar-text">dluh {$dluh}&nbsp;Kč</p></li>
+        <li><a n:if="$dluh" n:href="Mrazak:platba, $uziv->jmeno" class="dluh" title="Splatit dluh">Zaplatit</a></li>
       </ul>
       {/snippet}
 

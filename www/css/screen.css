@@ -4,8 +4,11 @@ body {
 .navbar {
   border-radius: 0;
 }
-.navbar-brand .glyphicon {
-  color: #fff;
+.navbar-brand .glyphicon, .navbar-nav .dluh {
+  color: #fff !important;
+}
+.navbar-nav .dluh:hover {
+  color: #29abe0 !important;
 }
 #nabidka .nanuk {
   margin-bottom: 10px;

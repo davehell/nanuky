@@ -1,13 +1,11 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/shortcuts.php';
 
 $configurator = new Nette\Configurator;
 
-//$configurator->setDebugMode(TRUE);  // debug mode MUST NOT be enabled on production server
+$configurator->setDebugMode(file_exists(__DIR__ . '/config/dev'));
 $configurator->enableDebugger(__DIR__ . '/../log');
-
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 
 $configurator->createRobotLoader()
@@ -16,7 +14,9 @@ $configurator->createRobotLoader()
 	->register();
 
 $configurator->addConfig(__DIR__ . '/config/config.neon');
-$configurator->addConfig(__DIR__ . '/config/config.local.neon');
+if (file_exists(__DIR__ . '/config/config.local.neon')) {
+	$configurator->addConfig(__DIR__ . '/config/config.local.neon');
+}
 
 $container = $configurator->createContainer();
 

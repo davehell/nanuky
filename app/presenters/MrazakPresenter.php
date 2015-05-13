@@ -47,6 +47,10 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderNabidka($uziv)
   {
+    if(strtoupper($uziv) == 'DHE' and ($_SERVER['REMOTE_ADDR'] != '127.0.0.1' && $_SERVER['REMOTE_ADDR'] != '192.168.1.158')) {
+      $this->flashMessage('Ty nejsi DHE!', 'danger');
+      $this->redirect('default');
+    }
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik();
     $this->template->oblibene = $this->mrazak->oblibene($uziv);

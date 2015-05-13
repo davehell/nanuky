@@ -8,7 +8,9 @@
 # enable cool URL
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	# RewriteBase /
+
+	#na ostre se musi odkomentovat
+	#RewriteBase /nanuky
 
 	# prevents files starting with dot to be viewed by browser
 	RewriteRule /\.|^\. - [F]

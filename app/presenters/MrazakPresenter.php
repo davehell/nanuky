@@ -47,10 +47,6 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderNabidka($uziv)
   {
-    if(strtoupper($uziv) == 'DHE' and ($_SERVER['REMOTE_ADDR'] != '127.0.0.1' && $_SERVER['REMOTE_ADDR'] != '192.168.1.158')) {
-      $this->flashMessage('Ty nejsi DHE!', 'danger');
-      $this->redirect('default');
-    }
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik();
     $this->template->oblibene = $this->mrazak->oblibene($uziv);
@@ -58,22 +54,24 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderPridat()
   {
+    $this->adminKontrola();
     $this->template->velikostBaleni = $this->nanuk->findAll()->fetchPairs('id', 'baleni');
   }
 
   public function renderDluhy()
   {
+    $this->adminKontrola();
     $this->template->dluznici = $this->kupec->seznamDluzniku();
   }
 
   public function renderNakupy()
   {
+    $this->adminKontrola();
     $this->template->nakupy = $this->mrazak->posledniNakupy();
   }
 
   public function renderPlatba($uziv)
   {
-
   }
 
   /**
@@ -115,6 +113,7 @@ final class MrazakPresenter extends BasePresenter
    */
   public function handleDluh($jmeno, $castka)
   {
+    $this->adminKontrola();
     $kupec = $this->kupec->get($jmeno);
     if(!$kupec) throw new NanukyException('Zákazník se jménem "' . $jmeno . '" neexistuje.');
 

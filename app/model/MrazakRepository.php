@@ -43,9 +43,16 @@ class MrazakRepository extends Repository
    * Poslední nákupy
    * @return \Nette\Database\Table\Selection
    */
-  public function posledniNakupy()
+  public function posledniNakupy($kupec = null)
   {
-    return $this->findAll()->where('datum_nakupu IS NOT NULL')->order('datum_nakupu DESC')->limit(20);
+    $nakupy = $this->findAll()->where('datum_nakupu IS NOT NULL')->order('datum_nakupu DESC');
+    if($kupec != null) {
+      $nakupy = $nakupy->where('kupec = ?', strtoupper($kupec));
+    }
+    else {
+      $nakupy = $nakupy->limit(50);
+    }
+    return $nakupy;
   }
 
   /**

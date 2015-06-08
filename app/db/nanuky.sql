@@ -40,6 +40,7 @@ CREATE TABLE "mrazak" (
   "cena_nakup" real NOT NULL,
   "cena_prodej" integer NOT NULL,
   "datum_nakupu" text NULL,
+  "ip" text NULL,
   FOREIGN KEY ("kupec") REFERENCES "kupci" ("jmeno") ON DELETE NO ACTION ON UPDATE NO ACTION,
   FOREIGN KEY ("nanuky_id") REFERENCES "nanuky" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
 );

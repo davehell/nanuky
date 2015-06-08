@@ -22,6 +22,7 @@
 <thead>
   <tr>
     <th>Datum</th>
+    <th>IP</th>
     <th>Nanuk</th>
     <th>Cena</th>
   </tr>
@@ -29,6 +30,7 @@
 <tbody>
   <tr n:foreach="$nakupy as $nakup">
     <td>{$nakup->datum_nakupu} </td>
+    <td>{$nakup->ip} </td>
     <td>{$nakup->nanuky->nazev} </td>
     <td>
       {$nakup->cena_prodej}&nbsp;Kč

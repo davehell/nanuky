@@ -219,7 +219,8 @@ final class MrazakPresenter extends BasePresenter
 
     $dataNakup = array(
       'kupec' => $jmeno,
-      'datum_nakupu' => date('Y-m-d H:i:s')
+      'datum_nakupu' => date('Y-m-d H:i:s'),
+      'ip' => $_SERVER['REMOTE_ADDR']
     );
     $dataKupec = array(
       'dluh' => $kupec->dluh + $nakup->cena_prodej
@@ -271,7 +272,8 @@ final class MrazakPresenter extends BasePresenter
 
     $dataNakup = array(
       'kupec' => null,
-      'datum_nakupu' => null
+      'datum_nakupu' => null,
+      'ip' => null
     );
 
     if($kupec) {

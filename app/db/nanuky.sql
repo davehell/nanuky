@@ -6,6 +6,7 @@ CREATE TABLE "kupci" (
   "prijmeni" text NULL,
   "dluh" integer NOT NULL DEFAULT '0',
   "zaplaceno" integer NOT NULL DEFAULT '0',
+  "datum_platby" text NULL,
   PRIMARY KEY ("jmeno")
 );
 
@@ -29,6 +30,7 @@ INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('PVR',	'V
 INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('RKO',	'Kroča',	0,	0);
 INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('VMA',	'Machálková',	0,	0);
 INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('VNE',	'Nečas',	0,	0);
+INSERT INTO "kupci" ("jmeno", "prijmeni", "dluh", "zaplaceno") VALUES ('JST', 'Števková',  0,  0);
 
 DROP TABLE IF EXISTS "mrazak";
 CREATE TABLE "mrazak" (

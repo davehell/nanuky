@@ -42,7 +42,8 @@ class KupecRepository extends Repository
     if($castka > 0) {
       $kupec->update(array(
         "dluh" => max(0, $kupec->dluh - $castka),
-        "zaplaceno" => $kupec->zaplaceno + $castka
+        "zaplaceno" => $castka,
+        "datum_platby" => date('Y-m-d H:i:s')
       ));
     }
     return $castka;

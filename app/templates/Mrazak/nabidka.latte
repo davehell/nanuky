@@ -11,7 +11,7 @@
       <a n:href="nakup!, $nanuk->id, $uziv->jmeno" class="image"
         data-confirm="modal"
         data-confirm-title="{$uziv->jmeno} kupuje"
-        data-confirm-text="{$nanuk->nazev} za {$ceny[$nanuk->id]} Kč"
+        data-confirm-text="{$nanuk->nazev} za {$ceny[$nanuk->id]} Kč / kus"
         data-ajax="on">
 
         <h3>{$nanuk->nazev}</h3>
@@ -22,7 +22,7 @@
         </div>
       </a>
       <p class="info clearfix">
-        <span class="cena pull-left"><strong>{$ceny[$nanuk->id]} Kč</strong> / 1 ks</span>
+        <span class="cena pull-left"><strong>{$ceny[$nanuk->id]} Kč</strong></span>
         <span class="pull-right">
           <a n:if="$uziv->jmeno == 'DHE'" title="Odepsat nanuk" n:href="nakup!, $nanuk->id" class="ajax btn btn-xs btn-warning"><span class="glyphicon glyphicon-thumbs-down"></span></a>
           skladem {$nanuk->pocet} ks

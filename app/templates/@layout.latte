@@ -19,7 +19,7 @@
   <div class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a n:href="Mrazak:, 'uziv' => null" class="navbar-brand"><span class="glyphicon glyphicon-ice-lolly-tasted"></span> Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a>
+        <a n:if="$uziv" n:href="Mrazak:nabidka" class="navbar-brand"><span class="glyphicon glyphicon-ice-lolly-tasted"></span> Nanuky <span n:if="$uziv">{$uziv->jmeno}</span></a>
       </div>
 
       {snippet dluh}

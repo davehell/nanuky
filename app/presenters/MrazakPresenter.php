@@ -72,6 +72,7 @@ final class MrazakPresenter extends BasePresenter
 
   public function renderPlatba($uziv)
   {
+    $this->template->datumPlatby = $this->kupec->posledniPlatba($uziv);
     $this->template->nakupy = $this->mrazak->posledniNakupy($uziv);
   }
 

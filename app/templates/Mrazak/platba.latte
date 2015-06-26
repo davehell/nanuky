@@ -28,7 +28,7 @@
   </tr>
 </thead>
 <tbody>
-  <tr n:foreach="$nakupy as $nakup">
+  <tr n:foreach="$nakupy as $nakup" class="{if $nakup->datum_nakupu > $datumPlatby}danger{/if}">
     <td>{$nakup->datum_nakupu} </td>
     <td>{$nakup->ip} </td>
     <td>{$nakup->nanuky->nazev} </td>

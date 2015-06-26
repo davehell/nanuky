@@ -48,4 +48,12 @@ class KupecRepository extends Repository
     }
     return $castka;
   }
+
+  /**
+   * @return string
+   */
+  public function posledniPlatba($jmeno)
+  {
+    return $this->get(strtoupper($jmeno))->datum_platby;
+  }
 }

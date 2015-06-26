@@ -50,6 +50,7 @@ final class MrazakPresenter extends BasePresenter
     $this->template->nanuky = $this->mrazak->inventura();
     $this->template->ceny = $this->mrazak->cenik();
     $this->template->oblibene = $this->mrazak->oblibene($uziv);
+    $this->template->odepsane = $this->mrazak->odepsane();
   }
 
   public function renderPridat()

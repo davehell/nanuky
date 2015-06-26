@@ -21,6 +21,15 @@ class MrazakRepository extends Repository
   }
 
   /**
+   * Přehled odepsaných nanuků
+   * @return \Nette\Database\Table\Selection
+   */
+  public function odepsane()
+  {
+    return $this->findAll()->where('kupec IS NULL')->where('datum_nakupu IS NOT NULL')->select('nanuky.nazev')->order('datum_nakupu');
+  }
+
+  /**
    * Ceny nanuků v mražáku.
    * @return array
    */

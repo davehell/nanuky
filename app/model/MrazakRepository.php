@@ -35,7 +35,7 @@ class MrazakRepository extends Repository
    */
   public function cenik()
   {
-    return $this->findAll()->where('datum_nakupu IS NULL')->select('DISTINCT nanuky_id AS id, cena_prodej AS cena')->order('id DESC')->fetchPairs('id', 'cena');
+    return $this->findAll()->where('datum_nakupu IS NULL')->select('nanuky_id AS id, cena_prodej AS cena')->group('nanuky_id')->having('MIN(id)')->order('id DESC')->fetchPairs('id', 'cena');
   }
 
   /**
